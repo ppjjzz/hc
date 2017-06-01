@@ -56,7 +56,7 @@ header{
            float: left;
            font-size: 28/$rc+rem;
            +a{
-               border-left: 1/$rc+rem solid #dbdbdb; 
+               border-left: 1px solid #dbdbdb; 
            }
         }
     }
@@ -79,11 +79,11 @@ section{
             float: left;
             width: 467/$rc+rem;
             .title{
-                font-size: 22/$rc+rem;
+                font-size: 24/$rc+rem;
                 
             }
             .small{
-                font-size: 16/$rc+rem;
+                font-size: 20/$rc+rem;
                 color: #ababab;
             }
         }
@@ -108,7 +108,7 @@ footer{
             height: 44/$rc+rem;
         }
         +a{
-            border-left: 1/$rc+rem solid white;
+            border-left: 1px solid white;
         }
     }
 }
