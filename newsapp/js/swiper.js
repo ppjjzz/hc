@@ -50,7 +50,7 @@ $.ajax({
 Vue.component("swiper",{
 	template:`<div class="swiper-container" id="banner">
   <div class="swiper-wrapper">
-    <div class="swiper-slide" v-for='item of items'><img :src='item.thumb'/><div class="newsTitle">{{item.mtitle}}</div></div>
+    <div class="swiper-slide" v-for='item of items'><a :href="item.surl"><img :src='item.thumb'/><div class="newsTitle">{{item.mtitle}}</div></a></div>
   </div>
   <div class="swiper-pagination"></div>
   
@@ -81,7 +81,9 @@ maxTranslate = mySwiper.maxTranslate();
 maxWidth = -maxTranslate + swiperWidth / 2
 
 $(".swiper-container").on('touchstart', function(e) {
-	e.preventDefault()
+	
+		e.preventDefault()
+	
 })
 
 mySwiper.on('tap', function(swiper, e) {
@@ -114,7 +116,7 @@ mySwiper.on('tap', function(swiper, e) {
 
 	$("#topNav  .active").removeClass('active')
 
-	$("#topNav .swiper-slide").eq(swiper.clickedIndex).addClass('active')
+	$("#topNav .swiper-slide").eq(mySwiper.clickedIndex).addClass('active')
 
 })
 
