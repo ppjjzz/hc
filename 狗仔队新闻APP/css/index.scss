@@ -1,0 +1,176 @@
+$rc:50;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica,STHeiti,Droid Sans Fallback;
+//  font-size: 28/$rc+rem;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+    height: 100%;
+    -webkit-user-select: none;
+    -webkit-text-size-adjust: 100%;
+}
+a{
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+    color: black;
+}
+li{
+    list-style: none;
+}
+
+header{
+    height: 150/$rc+rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    .logo{
+        width: 702/$rc+rem;
+        height: 60/$rc+rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a{
+            &.music{
+                display: inline-block;
+                width: 60/$rc+rem;
+                height: 60/$rc+rem;
+                background: url(../img/SVG/music.svg);
+            }
+            &.search{
+                background: url(../img/SVG/search.svg);
+                display: inline-block;
+                width: 60/$rc+rem;
+                height: 60/$rc+rem;
+            }
+        }
+        >img{
+            width: 214/$rc+rem;
+            height: 47/$rc+rem;
+        }
+    }
+    nav{
+        width: 702/$rc+rem;
+        height: 75/$rc+rem;
+        display: flex;
+        >a{
+            display: inline-block;
+                width: 60/$rc+rem;
+                height: 60/$rc+rem;
+            background: url(../img/SVG/menu.svg);
+        }
+        #topNav {
+                width: 644/$rc+rem;
+                overflow: hidden;
+                font: 16px/32px hiragino sans gb, microsoft yahei, simsun;
+                margin-left: 0;
+            }
+            #topNav .swiper-slide {
+                padding: 0 5px;
+                letter-spacing:2px;
+                width:97/$rc+rem;
+            }
+            #topNav .swiper-slide a{
+                transition:all .3s ease;
+                padding-bottom: 10/$rc+rem;
+                font-size: 28/$rc+rem;
+            }
+            #topNav .active a{
+                border-bottom: 4/$rc+rem solid #f8b62b;
+                color:#f8b62b;
+            }
+                }
+} 
+section{
+    padding: 150/$rc+rem 0 98/$rc+rem 0;
+    .swiper-container {
+    width: 100%;
+    height: 270/$rc+rem;
+    border-top: 1px solid #aaaaaa;
+    img{
+        height: 270/$rc+rem;
+        width: 100%;
+    }
+    .newsTitle{
+            position: absolute;
+            bottom: 6/$rc+rem;
+            left: 12/$rc+rem;
+            color: white;
+            z-index: 9999;
+            font-size: 16/$rc+rem;
+            opacity: 1;
+        }
+    .swiper-pagination-bullets{
+        bottom: 0;
+        background-color: rgba(13, 14, 19,0.6);
+        text-align: right;
+        
+    }
+    .swiper-pagination-bullet{
+        width: 17/$rc+rem;
+        height: 17/$rc+rem;
+        background: #d4d6d9;
+        opacity: 1;
+    }
+    .swiper-pagination-bullet-active{
+        background: #f8b62b;
+    }
+}
+} 
+footer{
+    height: 98/$rc+rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 0 68/$rc+rem;
+    .bottom-nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        a{
+            font-size: 17/$rc+rem;
+            display: inline-block;
+            width: 56/$rc+rem;
+            text-align: center;
+            &.currentPage{
+                color: #f39800;
+            }
+            
+            .index{
+                width: 56/$rc+rem;
+                height: 56/$rc+rem;
+                display: block;
+                 background: url(../img/SVG/indexCurrent.svg);
+            }
+            .video{
+                width: 56/$rc+rem;
+                height: 56/$rc+rem;
+                display: block;
+                background: url(../img/SVG/video.svg);
+            }
+            .dingyue{
+                width: 56/$rc+rem;
+                height: 56/$rc+rem;
+                display: block;
+                background: url(../img/SVG/news.svg);
+            }
+            .personal{
+                width: 56/$rc+rem;
+                height: 56/$rc+rem;
+                display: block;
+                background: url(../img/SVG/personal.svg);
+            }
+        }
+    }
+}
