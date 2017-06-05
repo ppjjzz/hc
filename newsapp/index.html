@@ -3,20 +3,28 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>狗仔队</title>
     <script type="text/javascript">
     	document.documentElement.style.fontSize=innerWidth/15+"px"
     </script>
+    <link rel="stylesheet" type="text/css" href="css/init.css"/>
     <link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="css/iscroll.css"/>-->
     <script src="js/jquery-3.2.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/component.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/ajax.js" type="text/javascript" charset="utf-8"></script>
+    
     <script src="js/swiper.js" type="text/javascript" charset="utf-8"></script>
+    <!--<script src="js/indexNews.js" type="text/javascript" charset="utf-8"></script>-->
 </head>
 <body>
-	
-<div id="app">
+
 	<header>
 		<div class="logo">
 			<a href="" class="music"></a><!--有声读物-->
@@ -28,7 +36,7 @@
   <div class="swiper-wrapper">
     <div class="swiper-slide active"><a href="">头条</a></div>
     <div class="swiper-slide"><a href="">港台</a></div>
-    <div class="swiper-slide"><a href="">内地</a></div>
+    <div class="swiper-slide"><a href="http://www.baidu.com">内地</a></div>
     <div class="swiper-slide"><a href="">国际</a></div>
     <div class="swiper-slide"><a href="">明星</a></div>
     <div class="swiper-slide"><a href="">电影</a></div>
@@ -52,8 +60,11 @@
 <a href="" class="menu"></a>
 		</nav>
 	</header>
-	<section>
+	<section id="app">
+		
 		<swiper :items='items'></swiper><!--banner轮播图组件-->
+			<news :newsdata='newsdata'></news><!--主页新闻组件-->
+		
 	</section>
 	<footer>
 		<div class="bottom-nav"><!--底部导航-->
@@ -63,6 +74,6 @@
 			<a href=""><i class="personal"></i>个人</a>
 		</div>
 	</footer>
-</div>
+
 </body>
 </html>
