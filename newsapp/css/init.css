@@ -1,0 +1,11 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: PingFang,Helvetica,STHeiti,Droid Sans Fallback; }
+
+html { width: 100%; height: 100%; }
+
+body { width: 100%; height: 100%; -webkit-user-select: none; -webkit-text-size-adjust: 100%; }
+
+a { -webkit-tap-highlight-color: transparent; text-decoration: none; color: black; }
+
+li { list-style: none; }
+
+/*# sourceMappingURL=init.css.map */
