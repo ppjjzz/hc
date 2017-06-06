@@ -2,16 +2,16 @@
 
 .clear::after { content: ""; display: block; clear: both; }
 
-header { height: 3rem; width: 100%; position: fixed; display: flex; flex-direction: column; align-items: center; justify-content: center; background: white; z-index: 9999999; }
-header .logo { width: 14.04rem; height: 1.2rem; display: flex; justify-content: space-between; align-items: center; }
+header { height: 3rem; width: 100%; position: fixed; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; background: white; z-index: 9999999; }
+header .logo { width: 14.04rem; height: 1.2rem; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 header .logo a.music { display: inline-block; width: 1.2rem; height: 1.2rem; background: url(../img/SVG/music.svg); }
 header .logo a.search { background: url(../img/SVG/search.svg); display: inline-block; width: 1.2rem; height: 1.2rem; }
 header .logo > img { width: 4.28rem; height: 0.94rem; }
-header nav { width: 14.04rem; height: 1.5rem; display: flex; }
+header nav { width: 14.04rem; height: 1.5rem; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
 header nav > a { display: inline-block; width: 1.2rem; height: 1.2rem; background: url(../img/SVG/menu.svg); }
 header nav #topNav { width: 12.88rem; overflow: hidden; font: 16px/32px hiragino sans gb, microsoft yahei, simsun; margin-left: 0; }
 header nav #topNav .swiper-slide { padding: 0 5px; letter-spacing: 2px; width: 1.94rem; }
-header nav #topNav .swiper-slide a { transition: all .3s ease; padding-bottom: 0.2rem; font-size: 0.56rem; }
+header nav #topNav .swiper-slide a { -webkit-transition: all .3s ease; -o-transition: all .3s ease; transition: all .3s ease; padding-bottom: 0.2rem; font-size: 0.56rem; }
 header nav #topNav .active a { border-bottom: 0.08rem solid #f8b62b; color: #f8b62b; }
 
 section { padding: 3rem 0 1.96rem 0; }
@@ -29,12 +29,10 @@ section #newslist li .text .source, section #newslist li .text .ptime { font-siz
 section #newslist li > img { width: 4.4rem; }
 
 footer { height: 1.96rem; width: 100%; position: fixed; bottom: 0; background: white; padding: 0 1.36rem; }
-footer .bottom-nav { display: flex; align-items: center; justify-content: space-between; }
-footer .bottom-nav a { font-size: 0.34rem; display: inline-block; min-width: 1.12rem; text-align: center; }
+footer .bottom-nav { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
+footer .bottom-nav a { font-size: 0.56rem; display: inline-block; min-width: 1.12rem; text-align: center; }
 footer .bottom-nav a.currentPage { color: #f39800; }
 footer .bottom-nav a .index { width: 1.12rem; height: 1.12rem; display: block; background: url(../img/SVG/indexCurrent.svg); }
 footer .bottom-nav a .video { width: 1.12rem; height: 1.12rem; display: block; background: url(../img/SVG/video.svg); }
 footer .bottom-nav a .dingyue { width: 1.12rem; height: 1.12rem; display: block; background: url(../img/SVG/news.svg); }
 footer .bottom-nav a .personal { width: 1.12rem; height: 1.12rem; display: block; background: url(../img/SVG/personal.svg); }
-
-/*# sourceMappingURL=index.css.map */

@@ -13,7 +13,19 @@ window.addEventListener('load',function(){
 			jsonpCallback:"callback",
 			success:function (data){
 				console.log(data);
-				app.newsdata=data.data.slice(0,20);
+				var arr=[];
+				for (let i = 0; i < data.data.length; i++) {
+					if(data.data[i].pic.length==0){
+						continue;
+					} else{
+						arr.push(data.data[i])
+					}
+					if(arr.length==30){
+						app.newsdata=arr;
+						break
+					}
+				}
+//				app.newsdata=data.data.slice(0,20);
 				
 			}
 		});  //网易新闻稳定API
@@ -24,8 +36,20 @@ $.ajax({
 			dataType:"jsonp",
 			jsonpCallback:"callback",
 			success:function (data){
-//				console.log(data);
-				app.items=data.data.slice(0,5);
+				console.log(data);
+				var arr=[]
+				for (let i = 0; i < data.data.length; i++) {
+					if(data.data[i].thumb==""){
+						continue;
+					} else{
+						arr.push(data.data[i])
+					}
+					if(arr.length==5){
+						app.items=arr;
+						break
+					}
+				}
+				
 			}
 		});  //新浪新闻稳定API
 //$.ajax({
