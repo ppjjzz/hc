@@ -1,4 +1,4 @@
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: PingFang,Helvetica,STHeiti,Droid Sans Fallback; }
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: PingFang,Helvetica,STHeiti,Droid Sans Fallback; }
 
 html { width: 100%; height: 100%; }
 
@@ -8,4 +8,6 @@ a { -webkit-tap-highlight-color: transparent; text-decoration: none; color: blac
 
 li { list-style: none; }
 
-/*# sourceMappingURL=init.css.map */
+.floatLeft { float: left; }
+
+.clear::after { content: ""; display: block; clear: both; }

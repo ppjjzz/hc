@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>狗仔队</title>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>狗仔队</title>
+    <script type="text/javascript">
+    	document.documentElement.style.fontSize=innerWidth/15+"px"
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/init.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/search.css"/>
+    <script src="../js/jquery-3.2.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/component.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/serach.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app2">
+			<header>
+			<a href="../index.html" id="back"></a>
+			<div id="search">
+				<input type="search" name="txt" id="txt" value="" class="blur" placeholder="搜索文章、视频、订阅号" v-model='keyword' />
+				
+			</div>
+			<a href="" id="cancel">取消</a>
+		</header>
+		<section>
+			<search :keyrs='keyrs' :keywords='keyword' v-show='show'></search>
+			<snews v-show='showrs' :newsdata='result'></snews>
+		</section>
+		</div>
+		
+	</body>
+</html>

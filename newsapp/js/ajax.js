@@ -1,5 +1,6 @@
+var app;
 window.addEventListener('load',function(){
-	var app=new Vue({
+	app=new Vue({
 	el:'#app',
 	data:{
 		items:5,

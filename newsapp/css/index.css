@@ -1,7 +1,3 @@
-.floatLeft { float: left; }
-
-.clear::after { content: ""; display: block; clear: both; }
-
 header { height: 3rem; width: 100%; position: fixed; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; background: white; z-index: 9999999; }
 header .logo { width: 14.04rem; height: 1.2rem; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 header .logo a.music { display: inline-block; width: 1.2rem; height: 1.2rem; background: url(../img/SVG/music.svg); }
@@ -22,7 +18,7 @@ section .swiper-container .swiper-pagination-bullets { bottom: 0; background-col
 section .swiper-container .swiper-pagination-bullet { width: 0.34rem; height: 0.34rem; background: #d4d6d9; opacity: 1; }
 section .swiper-container .swiper-pagination-bullet-active { background: #f8b62b; }
 section #newslist li { padding: 0.34rem 0.48rem 0.16rem; width: 100%; border-bottom: 1px solid #dbdbdb; background: #f0f0f0; }
-section #newslist li .del { font-size: 0.32rem; border-width: 1px; border-color: #909090; border-style: solid; text-align: center; line-height: 0.56rem; width: 0.56rem; height: 0.56rem; border-radius: 50%; color: #909090; margin-left: 0.36rem; }
+section #newslist li .del { font-size: 0.32rem; border-width: 1px; border-color: #909090; border-style: solid; text-align: center; line-height: 0.56rem; width: 0.56rem; height: 0.56rem; -webkit-border-radius: 50%; border-radius: 50%; color: #909090; margin-left: 0.36rem; }
 section #newslist li .text { width: 8.7rem; }
 section #newslist li .text h4 { font-size: 0.56rem; font-weight: normal; padding-right: 0.6rem; }
 section #newslist li .text .source, section #newslist li .text .ptime { font-size: 0.34rem; color: #646464; }

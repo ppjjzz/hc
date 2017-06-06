@@ -25,7 +25,9 @@ banner.on('tap',function(swiper, e){
     window.location.href=swiper.slides[swiper.clickedIndex].lastElementChild.href;//banner图链接跳转
 })
 mySwiper.on('tap', function(swiper, e) {
-    
+    if($(e.target).parent().hasClass("active")){
+    	location.href=e.target.href
+    }
 	slide = swiper.slides[swiper.clickedIndex]
 	slideLeft = slide.offsetLeft
 	slideWidth = slide.clientWidth
