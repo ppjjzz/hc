@@ -26,7 +26,17 @@ banner.on('tap',function(swiper, e){
 })
 mySwiper.on('tap', function(swiper, e) {
     if($(e.target).parent().hasClass("active")){
-    	location.href=e.target.href
+//  	location.href=e.target.href
+     if(e.target.title=="index"){
+       app.show=true;
+     } else{
+     	app.newscdata.length=0;
+       arr2.length=0;
+       app.show=false;
+       getNews(e.target.title,0);
+     }
+     $(window).scrollTop(0)
+       
     }
 	slide = swiper.slides[swiper.clickedIndex]
 	slideLeft = slide.offsetLeft

@@ -34,36 +34,40 @@
 		<nav>
 			<div id="topNav" class="swiper-container">
   <div class="swiper-wrapper">
-    <div class="swiper-slide active"><a href="">头条</a></div>
-    <div class="swiper-slide"><a href="">港台</a></div>
-    <div class="swiper-slide"><a href="http://www.baidu.com">内地</a></div>
-    <div class="swiper-slide"><a href="">国际</a></div>
-    <div class="swiper-slide"><a href="">明星</a></div>
-    <div class="swiper-slide"><a href="">电影</a></div>
-    <div class="swiper-slide"><a href="">音乐</a></div>
-    <div class="swiper-slide"><a href="">热点</a></div>
-    <div class="swiper-slide"><a href="">视频</a></div>
-    <div class="swiper-slide"><a href="">奇趣</a></div>
-    <div class="swiper-slide"><a href="">图片</a></div>
-    <div class="swiper-slide"><a href="">财经</a></div>
-    <div class="swiper-slide"><a href="">军事</a></div>
-    <div class="swiper-slide"><a href="">历史</a></div>
-    <div class="swiper-slide"><a href="">涨知识</a></div>
-    <div class="swiper-slide"><a href="">NBA</a></div>
-    <div class="swiper-slide"><a href="">科技</a></div>
-    <div class="swiper-slide"><a href="">体育</a></div>
-    <div class="swiper-slide"><a href="">骑车</a></div>
-    <div class="swiper-slide"><a href="">头条</a></div>
-    <div class="swiper-slide"><a href="">大咖</a></div>
+    <div class="swiper-slide active"><a href="#" title="index">头条</a></div>
+    <div class="swiper-slide"><a href="#" title="pcent">娱乐</a></div>
+    <div class="swiper-slide"><a href="#" title="pctech">科技</a></div>
+    <div class="swiper-slide"><a href="#" title="pcspt">体育</a></div>
+    <div class="swiper-slide"><a href="#" title="pcfin">财经</a></div>
+    <div class="swiper-slide"><a href="#" title="wmil">军事</a></div>
+    <div class="swiper-slide"><a href="#">音乐</a></div>
+    <div class="swiper-slide"><a href="#">热点</a></div>
+    <div class="swiper-slide"><a href="#">视频</a></div>
+    <div class="swiper-slide"><a href="#">奇趣</a></div>
+    <div class="swiper-slide"><a href="#">图片</a></div>
+    <div class="swiper-slide"><a href="#">财经</a></div>
+    <div class="swiper-slide"><a href="#">电影</a></div>
+    <div class="swiper-slide"><a href="#">历史</a></div>
+    <div class="swiper-slide"><a href="#">涨知识</a></div>
+    <div class="swiper-slide"><a href="#">NBA</a></div>
+    <div class="swiper-slide"><a href="#">内地</a></div>
+    <div class="swiper-slide"><a href="#">国际</a></div>
+    <div class="swiper-slide"><a href="#">骑车</a></div>
+    <div class="swiper-slide"><a href="#">头条</a></div>
+    <div class="swiper-slide"><a href="#">大咖</a></div>
   </div>
 </div>
 <a href="" class="menu"></a>
 		</nav>
 	</header>
 	<section id="app">
-		
-		<swiper :items='items'></swiper><!--banner轮播图组件-->
+		<template v-if='show'>
+			<swiper :items='items'></swiper><!--banner轮播图组件-->
 			<news :newsdata='newsdata'></news><!--主页新闻组件-->
+		</template>
+		<template v-else>
+			<newsc :newscdata='newscdata'></newsc><!--分类新闻组件-->
+		</template>
 		
 	</section>
 	<footer>

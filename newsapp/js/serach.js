@@ -24,9 +24,7 @@ $(function(){
 		}
 	})
 	
-//  $("#txt").on("input paste",function(){
-//  	request($(this).val());
-//  })
+
     function request(key){
     	$.ajax({
 			type:"get",
@@ -58,10 +56,12 @@ $(function(){
     	app2.show=false;
     	app2.showrs=true;
     })
+    $("#list").on('touchstart',function(){
+    	$("#txt").trigger('blur')
+    })
 	$("#txt").on("focus",function(){
 		$(this).removeClass("blur");
 		$(this).attr("placeholder","");
-		console.log("aa")
 		app2.show=true;
 		app2.showrs=false;
 	})
@@ -72,4 +72,5 @@ $(function(){
 		}
 		
 	})
+	
 })

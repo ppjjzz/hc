@@ -1,10 +1,13 @@
 var app;
+var arr2=[];
 window.addEventListener('load',function(){
 	app=new Vue({
 	el:'#app',
 	data:{
 		items:5,
 		newsdata:[],
+		newscdata:[],
+		show:true,
 	},
 })
 	$.ajax({
@@ -26,7 +29,6 @@ window.addEventListener('load',function(){
 						break
 					}
 				}
-//				app.newsdata=data.data.slice(0,20);
 				
 			}
 		});  //网易新闻稳定API
@@ -53,6 +55,11 @@ $.ajax({
 				
 			}
 		});  //新浪新闻稳定API
+		
+
+//$.getJSON('http://cre.mix.sina.com.cn/api/v3/get?callback=cateid=10Q&cre=tianyi&mod=went&merge=3&statics=1&length=5&up=0&down=0&fields=media',function(data){
+//	console.log(data)
+//})
 //$.ajax({
 //			type:"get",
 //			url:"https://www.toutiao.com/api/pc/feed/?category=news_entertainment&utm_source=toutiao&widen=1&max_behot_time=0&max_behot_time_tmp=0&tadrequire=true&as=A165A9F3D28DBE6&cp",
@@ -82,3 +89,30 @@ $.ajax({
 //		});  //腾讯音乐资讯稳定API	
   
 },false)
+function getNews(type,page){
+			
+			$.ajax({
+			type:"get",
+			url:`http://cre.mix.sina.com.cn/api/v3/get?callback&cateid=1&cre=tianyi&mod=${type}&merge=3&statics=1&length=20&up=${page}&down=0&fields=media`,
+			dataType:"jsonp",
+//			jsonpCallback:"callback",
+			success:function (data){
+				console.log(data);
+				
+				for (let i = 2; i < data.data.length; i++) {
+					if(data.data[i].thumb==null || data.data[i].mintro==null){
+						continue;
+					} else{
+						arr2.push(data.data[i])
+					}
+					
+				}
+				if(arr2.length<20){
+					getNews(type,page+1)
+				} else{
+					app.newscdata=arr2;
+				}
+				
+			}
+		});  //新浪娱乐稳定API	
+		}

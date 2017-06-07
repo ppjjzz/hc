@@ -1,3 +1,5 @@
+html { background: #f0f0f0; }
+
 #app2 { height: 100%; }
 
 header { height: 1.76rem; width: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; padding: 0 0.48rem; position: fixed; top: 0; z-index: 1; background: white; }
@@ -7,13 +9,13 @@ header #search #txt { position: absolute; top: 0.16rem; left: 0.26rem; font-size
 header #search #txt.blur { background: url(../img/SVG/searchActive.svg) no-repeat; -webkit-background-size: 1rem 1rem; background-size: 1rem 1rem; background-position: -0.2rem -0.2rem; padding-left: 0.72rem; }
 header #cancel { font-size: 0.6rem; }
 
-section { background: #f0f0f0; padding-top: 1.76rem; height: 100%; width: 100%; }
+section { padding-top: 1.76rem; height: 100%; width: 100%; }
 section .result-list { padding: 0.6rem 0.48rem; font-size: 0.6rem; border-bottom: 1px solid #DBDBDB; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 section .result-list .highlight { color: red; }
 section .result-list > img { width: 1.2rem; }
 section #newslist li { padding: 0.34rem 0.48rem 0.16rem; width: 100%; border-bottom: 1px solid #dbdbdb; background: #f0f0f0; }
 section #newslist li .del { font-size: 0.32rem; border-width: 1px; border-color: #909090; border-style: solid; text-align: center; line-height: 0.56rem; width: 0.56rem; height: 0.56rem; -webkit-border-radius: 50%; border-radius: 50%; color: #909090; margin-left: 0.36rem; }
-section #newslist li .text { width: 9rem; }
+section #newslist li .text { width: 9.6rem; }
 section #newslist li .text h4 { font-size: 0.56rem; font-weight: normal; padding-right: 0.6rem; }
 section #newslist li .text .source, section #newslist li .text .ptime { font-size: 0.34rem; color: #646464; }
 section #newslist li > img { width: 4.4rem; }
