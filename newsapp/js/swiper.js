@@ -25,8 +25,9 @@ banner.on('tap',function(swiper, e){
     window.location.href=swiper.slides[swiper.clickedIndex].lastElementChild.href;//banner图链接跳转
 })
 mySwiper.on('tap', function(swiper, e) {
-    if($(e.target).parent().hasClass("active")){
-//  	location.href=e.target.href
+	$(window).scrollTop(0)
+//  if($(e.target).parent().hasClass("active")){
+////  	location.href=e.target.href
      if(e.target.title=="index"){
        app.show=true;
      } else{
@@ -35,9 +36,9 @@ mySwiper.on('tap', function(swiper, e) {
        app.show=false;
        getNews(e.target.title,0);
      }
-     $(window).scrollTop(0)
-       
-    }
+//   $(window).scrollTop(0)
+//     
+//  }
 	slide = swiper.slides[swiper.clickedIndex]
 	slideLeft = slide.offsetLeft
 	slideWidth = slide.clientWidth

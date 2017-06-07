@@ -10,20 +10,26 @@ Vue.component("swiper",{
 
 })
 Vue.component('news',{
-	template:`<ul id='newslist'><li v-for='datas of newsdata' class='clear'><div class='text floatLeft'><h4>{{datas.title}}</h4><p><span class='source'>{{datas.source}}</span>&nbsp&nbsp&nbsp<span class='ptime'>{{datas.ptime}}</span></p></div><img :src='datas.pic[0]' class='floatLeft' /><span class='del floatLeft' @click='del'>X</span></li></ul>`,
+	template:`<ul id='newslist'><li v-for='datas of newsdata' class='clear' v-on:click='links' :title='datas.url'><div class='text floatLeft'><h4 :urls='datas.url'>{{datas.title}}</h4><p :title='datas.url'><span class='source'>{{datas.source}}</span>&nbsp&nbsp&nbsp<span class='ptime'>{{datas.ptime}}</span></p></div><img :src='datas.pic[0]' class='floatLeft' :title='datas.url' /><span class='del floatLeft' @click='del'>X</span></li></ul>`,
 	props:['newsdata'],
 	methods:{
-		del:function(ev,el){
+		del:function(ev){
 			ev.target.parentElement.parentElement.removeChild(ev.target.parentElement)
+		},
+		links:function(ev){
+			window.location.href=ev.target.title
 		}
 	}
 })
 Vue.component('newsc',{
-	template:`<ul id='newslist'><li v-for='datas of newscdata' class='clear'><div class='text floatLeft'><h4>{{datas.mintro}}</h4><p><span class='source'>{{datas.media}}</span>&nbsp&nbsp&nbsp<span class='ptime'>{{today}}</span></p></div><img :src='datas.thumb' class='floatLeft' /><span class='del floatLeft' @click='del'>X</span></li></ul>`,
+	template:`<ul id='newslist'><li v-for='datas of newscdata' class='clear' @click='links'><div class='text floatLeft'><h4 :title='datas.surl'>{{datas.mintro}}</h4><p><span class='source' :title='datas.surl'>{{datas.media}}</span>&nbsp&nbsp&nbsp<span class='ptime'>{{today}}</span></p></div><img :src='datas.thumb' class='floatLeft' :title='datas.surl' /><span class='del floatLeft' @click='del'>X</span></li></ul>`,
 	props:['newscdata'],
 	methods:{
-		del:function(ev,el){
+		del:function(ev){
 			ev.target.parentElement.parentElement.removeChild(ev.target.parentElement)
+		},
+		links:function(ev){
+			window.location.href=ev.target.title
 		}
 	},
 	computed:{
