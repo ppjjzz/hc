@@ -22,7 +22,7 @@ Vue.component('news',{
 	}
 })
 Vue.component('newsc',{
-	template:`<ul id='newslist'><li v-for='datas of newscdata' class='clear' @click='links'><div class='text floatLeft'><h4 :title='datas.surl'>{{datas.mintro}}</h4><p><span class='source' :title='datas.surl'>{{datas.media}}</span>&nbsp&nbsp&nbsp<span class='ptime'>{{today}}</span></p></div><img :src='datas.thumb' class='floatLeft' :title='datas.surl' /><span class='del floatLeft' @click='del'>X</span></li></ul>`,
+	template:`<ul id='newslist'><li v-for='datas of newscdata' class='clear' @click='links' :title='datas.surl'><div class='text floatLeft' :title='datas.surl'><h4 :title='datas.surl'>{{datas.mintro}}</h4><p><span class='source' :title='datas.surl'>{{datas.media}}</span>&nbsp&nbsp&nbsp<span class='ptime' :title='datas.surl'>{{today}}</span></p></div><img :src='datas.thumb' class='floatLeft' :title='datas.surl' /><span class='del floatLeft' @click='del'>X</span></li></ul>`,
 	props:['newscdata'],
 	methods:{
 		del:function(ev){
