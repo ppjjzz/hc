@@ -17,7 +17,10 @@ Vue.component('news',{
 			ev.target.parentElement.parentElement.removeChild(ev.target.parentElement)
 		},
 		links:function(ev){
-			window.location.href=ev.target.title
+			if(ev.target.innerHTML!="X"){
+				window.location.href=ev.target.title
+			}
+			
 		}
 	}
 })
