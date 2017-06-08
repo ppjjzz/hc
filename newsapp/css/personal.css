@@ -1,0 +1,35 @@
+a { color: #636363; }
+
+body { background: #f0f0f0; }
+
+header { height: 10.96rem; position: fixed; width: 100%; z-index: 1; background: #f8b62b; overflow: hidden; }
+header .radius { position: absolute; top: 3.88rem; left: -10.5rem; width: 36rem; height: 36rem; -webkit-border-radius: 50%; border-radius: 50%; background: white; z-index: -4; }
+header .circle { position: absolute; width: 3.76rem; height: 3.76rem; top: 2.32rem; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); background: white; z-index: -3; -webkit-border-radius: 50%; border-radius: 50%; text-align: center; line-height: 3.76rem; }
+header .circle img { width: 2.44rem; height: 1.8rem; }
+header .denglu { position: absolute; top: 6.32rem; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); width: 3.4rem; height: 1rem; -webkit-border-radius: 0.1rem; border-radius: 0.1rem; background: #F8B62B; z-index: 1; font-size: 0.44rem; text-align: center; line-height: 1rem; }
+header .triangle { position: absolute; top: 5.94rem; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); width: 0; height: 0; border: 0.2rem solid transparent; border-color: transparent transparent #F8B62B transparent; }
+header .backbottom { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; width: 100%; position: absolute; bottom: 0; left: 0; -webkit-justify-content: space-around; -ms-flex-pack: distribute; justify-content: space-around; }
+header .backbottom li { min-width: 1.92rem; text-align: center; }
+header .backbottom li a { font-size: 0.4rem; }
+header .backbottom li img { display: block; width: 1.16rem; height: 1.16rem; margin: 0 auto; }
+
+section { padding-top: 11.28rem; padding-bottom: 1.96rem; -webkit-box-sizing: border-box; box-sizing: border-box; background: #f0f0f0; width: 100%; }
+section ul { background: #f4f4f4; }
+section ul li { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; width: 100%; height: 1.8rem; border-top: 0.02rem solid #DBDBDB; padding-left: 0.48rem; padding-right: 1.2rem; -webkit-box-sizing: border-box; box-sizing: border-box; background: white; }
+section ul li a { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; width: 100%; }
+section ul li a span { font-size: 0.6rem; }
+section ul li a span.right { -webkit-box-flex: 10; -webkit-flex-grow: 10; -ms-flex-positive: 10; flex-grow: 10; text-align: right; }
+section ul li a span.text { -webkit-box-flex: 10; -webkit-flex-grow: 10; -ms-flex-positive: 10; flex-grow: 10; }
+section ul li a span.imgs { -webkit-box-flex: 2; -webkit-flex-grow: 2; -ms-flex-positive: 2; flex-grow: 2; }
+section ul li img { width: 0.8rem; height: 0.8rem; vertical-align: middle; }
+section ul li:nth-of-type(5) { background: #F0F0F0; }
+section ul li:nth-of-type(6) { border-bottom: 0.02rem solid #DBDBDB; }
+
+footer { height: 1.96rem; width: 100%; position: fixed; z-index: 1; bottom: 0; padding: 0 1.36rem; background: white; -webkit-box-sizing: border-box; box-sizing: border-box; }
+footer .bottom-nav { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
+footer .bottom-nav a { font-size: 0.56rem; display: inline-block; min-width: 1.12rem; text-align: center; }
+footer .bottom-nav a.currentPage { color: #f39800; }
+footer .bottom-nav a .index { width: 1.12rem; height: 1.12rem; display: block; background: url(../img/SVG/index.svg); }
+footer .bottom-nav a .video { width: 1.12rem; height: 1.12rem; display: block; background: url(../img/SVG/video.svg); }
+footer .bottom-nav a .dingyue { width: 1.12rem; height: 1.12rem; display: block; background: url(../img/SVG/news.svg); }
+footer .bottom-nav a .personal { width: 1.12rem; height: 1.12rem; display: block; background: url(../img/SVG/personalCurrent.svg); }

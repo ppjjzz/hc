@@ -1,0 +1,14 @@
+body { background: #F0F0F0; }
+
+header { width: 100%; height: 1.76rem; color: #333; font-size: 0.6rem; line-height: 1.76rem; padding-left: 0.3rem; background: white; }
+header a .back { display: block; width: 1rem; line-height: 1.76rem; height: 1.76rem; background: url(../img/SVG/back.svg) no-repeat; -webkit-background-size: 100% 100%; background-size: 100% 100%; float: left; }
+header a .set { float: left; }
+
+section { width: 100%; padding-top: 1.84rem; }
+section .zhfx { background: white; width: 100%; }
+section .zhfx li { height: 2rem; padding: 0 0.64rem; border-top: 1px solid #dbdbdb; }
+section .zhfx li:last-child { border-bottom: 1px solid #dbdbdb; }
+section .zhfx li a .yxzh { color: #777777; line-height: 2rem; font-size: 0.56rem; float: left; }
+section .zhfx li a .xb { float: right; }
+section .zhfx li a .xb .forright { float: left; width: 0.52rem; height: 0.52rem; overflow: hidden; position: relative; margin-top: 0.74rem; float: left; }
+section .zhfx li a .xb .forright .jk { display: block; width: 0.52rem; height: 0.52rem; border: 1px solid #777777; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); position: absolute; top: 0; left: -0.26rem; float: left; }

@@ -1,0 +1,26 @@
+body, html { background: #f4f4f4; }
+
+header { height: 2.93333rem; width: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; padding: 0 0.8rem; background: white; }
+header a:first-child { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+header #back { background: url(../img/SVG/back.svg) no-repeat; display: inline-block; height: 3rem; width: 3rem; margin-left: -1.16667rem; }
+header #cancel { font-size: 1rem; }
+
+section { width: 100%; height: 21.6rem; background: #f4f4f4; position: relative; }
+section .radius { position: absolute; top: 2.5rem; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); width: 9.83333rem; height: 9.83333rem; -webkit-border-radius: 50%; border-radius: 50%; background: #f8b62b; }
+section .radius img { width: 9.83333rem; }
+section ul { position: absolute; bottom: 0; width: 100%; height: 6.66667rem; background: #FFFFFF; -webkit-box-sizing: border-box; box-sizing: border-box; }
+section ul li { width: 100%; height: 3.33333rem; -webkit-box-sizing: border-box; box-sizing: border-box; border-bottom: 0.03333rem solid #dbdbdb; line-height: 3.33333rem; padding-left: 1.03333rem; color: #bbbbbb; }
+section ul li:first-child { border-top: 0.03333rem solid #dbdbdb; }
+section ul li input { border: none; outline: none; font-size: 0.93333rem; }
+section ul li img { vertical-align: middle; width: 1.73333rem; height: 1.86667rem; margin-right: 1.06667rem; }
+
+footer { position: relative; width: 100%; height: 17.6rem; -webkit-box-sizing: border-box; box-sizing: border-box; background: #f4f4f4; padding-top: 1rem; padding-left: 0.8rem; padding-right: 0.8rem; }
+footer #bubble { width: 100%; height: 2.5rem; border: 1px solid #DBDBDB; text-align: center; line-height: 2.5rem; color: black; -webkit-border-radius: 0.33333rem; border-radius: 0.33333rem; background: white; }
+footer #key { width: 100%; margin-top: 1.6rem; }
+footer #key span { float: right; font-size: 0.8rem; font-family: "PingFang"; color: #f8b62b; }
+footer div:nth-of-type(2) { position: absolute; bottom: 0; left: 0; width: 7.6rem; height: 8.3rem; border-top: 0.03333rem solid #e5e5e5; }
+footer div:nth-of-type(3) { position: absolute; bottom: 0; left: 7.6rem; width: 9.86667rem; height: 8.8rem; }
+footer div:nth-of-type(3) p { width: 100%; height: 1rem; text-align: center; color: #acacac; }
+footer div:nth-of-type(3) #pics { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; width: 100%; height: 2.03333rem; margin-top: 1.06667rem; }
+footer div:nth-of-type(3) #pics img { width: 2.03333rem; }
+footer div:nth-of-type(4) { position: absolute; bottom: 0; right: 0; width: 7.6rem; height: 8.3rem; border-top: 0.03333rem solid #e5e5e5; }

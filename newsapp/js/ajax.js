@@ -1,10 +1,10 @@
 var app;
 var arr2=[];
-var length=0;
+var length=31;
 var res;
 function loadnews(){
 		var arr=[];
-		length+=10;
+		
 				for (let i = length; i < res.data.length; i++) {
 					if(res.data[i].pic.length==0){
 						continue;
@@ -12,6 +12,7 @@ function loadnews(){
 						arr.push(res.data[i])
 					}
 					if(arr.length==10){
+						length=i+1;
 						app.newsdata=app.newsdata.concat(arr);
 						break
 					}

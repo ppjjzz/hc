@@ -1,0 +1,14 @@
+body { background-color: #f0f0f0; }
+
+header { height: 2.93333rem; width: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; padding: 0 0.8rem; background: white; }
+header a:first-child { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+header #back { background: url(../img/SVG/back.svg) no-repeat; display: inline-block; height: 3rem; width: 3rem; margin-left: -1.16667rem; }
+
+section { width: 100%; }
+section p { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; width: 100%; padding: 0.83333rem 1.03333rem 1rem 1.03333rem; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
+section p span { color: #777777; font-size: 0.86667rem; letter-spacing: 1px; }
+section .d2 { width: 100%; margin-top: 1.16667rem; border: none; height: 1px; background: rgba(255, 255, 255, 0.294); -webkit-box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.294); box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.294); }
+section ul { width: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; padding: 0 0.8rem; }
+section ul li { width: 4.03333rem; margin-bottom: 0.8rem; background-color: #fff; text-align: center; position: relative; -webkit-border-radius: 0.16667rem; border-radius: 0.16667rem; }
+section ul li a { font-size: 0.8rem; line-height: 1.66667rem; }
+section ul li span { width: 1.03333rem; height: 1.03333rem; position: absolute; background: url(../img/12.jpg) no-repeat; -webkit-background-size: contain; background-size: contain; top: -0.66667rem; left: 90%; }

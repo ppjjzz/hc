@@ -68,14 +68,10 @@ mySwiper.on('tap', function(swiper, e) {
 	$("#topNav .swiper-slide").eq(mySwiper.clickedIndex).addClass('active')
 
 })
-    $("#app").on("touchstart",function(ev){
-    	y=ev.touches[0].pageY;
-    	st=$(this).scrollTop()
-    })
-    $("#app").on("touchmove",function(ev){
-    	sy=ev.touches[0].pageY-y;
-    	var yy=$("#banner").height()+$("#newslist").height()-$("#app").height()
-    	if(sy<0 && st>yy && !flag){
+    $(document).on("scroll",function(){
+    	st=$(document).scrollTop()+2;
+    	var yy=$("#app").outerHeight()-$("body").height()
+    	if(st>yy && !flag){
     		$("<li id='loading'><img src='img/LOGO4.png' /></li>").appendTo($("#newslist"));
     		flag=true;
     		setTimeout(function(){
@@ -85,8 +81,27 @@ mySwiper.on('tap', function(swiper, e) {
     		},3000)
     	}
     })
-//  $("#app").on("touchend",function(ev){
+//  $("#app").on("touchstart",function(ev){
+//  	y=ev.touches[0].pageY;
+//
+//  	console.log(($("#app").outerHeight()-$("body").height()),st)
+//  })
+//  $("#app").on("touchmove",function(ev){
+//  	sy=ev.touches[0].pageY-y;
+//  	st=$(document).scrollTop()+1
 //  	
+//  })
+//  $("#app").on("touchend",function(ev){
+//  	var yy=$("#app").outerHeight()-$("body").height()
+//  	if(sy<0 && st>yy && !flag){
+//  		$("<li id='loading'><img src='img/LOGO4.png' /></li>").appendTo($("#newslist"));
+//  		flag=true;
+//  		setTimeout(function(){
+//  			flag=false;
+//  			$("#loading").remove()
+//  			loadnews()
+//  		},3000)
+//  	}
 //  })
 },false)
 
