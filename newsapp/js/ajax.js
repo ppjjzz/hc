@@ -1,5 +1,22 @@
 var app;
 var arr2=[];
+var length=0;
+var res;
+function loadnews(){
+		var arr=[];
+		length+=10;
+				for (let i = length; i < res.data.length; i++) {
+					if(res.data[i].pic.length==0){
+						continue;
+					} else{
+						arr.push(res.data[i])
+					}
+					if(arr.length==10){
+						app.newsdata=app.newsdata.concat(arr);
+						break
+					}
+				}
+	}
 window.addEventListener('load',function(){
 	app=new Vue({
 	el:'#app',
@@ -10,13 +27,15 @@ window.addEventListener('load',function(){
 		show:true,
 	},
 })
-	$.ajax({
+	
+		$.ajax({
 			type:"get",
 			url:"http://temp.163.com/special/00804KV1/post1603_api_all.js?callback=callback",
 			dataType:"jsonp",
 			jsonpCallback:"callback",
 			success:function (data){
 				console.log(data);
+				res=data;
 				var arr=[];
 				for (let i = 0; i < data.data.length; i++) {
 					if(data.data[i].pic.length==0){
@@ -25,13 +44,14 @@ window.addEventListener('load',function(){
 						arr.push(data.data[i])
 					}
 					if(arr.length==30){
-						app.newsdata=arr;
+						app.newsdata=app.newsdata.concat(arr);
 						break
 					}
 				}
 				
 			}
 		});  //网易新闻稳定API
+	
 		
 $.ajax({
 			type:"get",
