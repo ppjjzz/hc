@@ -1,0 +1,22 @@
+html { background: #f0f0f0; }
+
+#video-section #newslist li .title, #video-section #newslist li .title span { overflow: hidden; white-space: nowrap; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
+
+#video-nav { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; width: 14.04rem; }
+#video-nav a { font: 16px/32px hiragino sans gb, microsoft yahei, simsun; -webkit-transition: all .3s ease; -o-transition: all .3s ease; transition: all .3s ease; }
+#video-nav a.active { border-bottom: 0.08rem solid #f8b62b; color: #f8b62b; }
+
+#video-section { height: 100%; width: 100%; }
+#video-section #newslist { padding-bottom: 1.96rem; }
+#video-section #newslist li { padding: 0.7rem 0 0.34rem; line-height: 0.84rem; }
+#video-section #newslist li video { width: 100%; }
+#video-section #newslist li p { font-size: 0.48rem; padding: 0 0.48rem; color: #646464; }
+#video-section #newslist li p img { height: 0.6rem; vertical-align: middle; }
+#video-section #newslist li p img.commit { height: 1rem; margin-left: 1.36rem; }
+#video-section #newslist li p img.share { margin-left: 7.22rem; }
+#video-section #newslist li .title { padding: 0 0.48rem; }
+#video-section #newslist li .title p { font-size: 0.6rem; padding: 0; }
+#video-section #newslist li .title span { font-size: 0.48rem; color: #646464; }
+
+#video-footer .index { background: url(../img/SVG/index.svg); }
+#video-footer .video { background: url(../img/SVG/videoCurrent.svg); }
