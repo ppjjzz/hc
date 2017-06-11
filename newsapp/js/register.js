@@ -69,7 +69,7 @@
 		return String.fromCharCode(x);
 	})
 //	arr=arr.map(x=>x.toUpperCase())
-	for (let i=0;i<4;i++) {
+	for (var i=0;i<4;i++) {
 		var ran=parseInt(Math.random()*52);
 		code+=arr[ran];
 	}
@@ -79,7 +79,7 @@
 	ctx.fill()
 	canvas.onclick=function(){
 		code="";
-		for (let i=0;i<4;i++) {
+		for (var i=0;i<4;i++) {
 		var ran=parseInt(Math.random()*52);
 		code+=arr[ran];
 	}
