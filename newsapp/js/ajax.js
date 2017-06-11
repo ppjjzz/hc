@@ -5,7 +5,7 @@ var res;
 function loadnews(){
 		var arr=[];
 		
-				for (let i = length; i < res.data.length; i++) {
+				for (var i = length; i < res.data.length; i++) {
 					if(res.data[i].pic.length==0){
 						continue;
 					} else{
@@ -38,7 +38,7 @@ window.addEventListener('load',function(){
 				console.log(data);
 				res=data;
 				var arr=[];
-				for (let i = 0; i < data.data.length; i++) {
+				for (var i = 0; i < data.data.length; i++) {
 					if(data.data[i].pic.length==0){
 						continue;
 					} else{
