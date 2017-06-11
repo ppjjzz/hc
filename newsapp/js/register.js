@@ -1,4 +1,4 @@
-window.onload=function(){
+
   var email=document.getElementById("email"),
        mobile=document.getElementById("mobile"),
 	    codes=document.getElementById("code"),
@@ -101,4 +101,3 @@ function CheckPassWord(password) {//必须为字母加数字且长度不小于8�
     } else {
         return false;
     }
-}
