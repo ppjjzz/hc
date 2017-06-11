@@ -1,9 +1,7 @@
 <?php
 	header('Access-Control-Allow-Origin:*');
  $email=$_POST['email'];
- echo $email;
  $passcode=md5($_POST['passcode']);
- echo $passcode;
  $conn=mysql_connect("localhost","root","Pjz530019582");
 
 		mysql_select_db("user");
