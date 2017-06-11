@@ -1,4 +1,3 @@
-
   var email=document.getElementById("email"),
        mobile=document.getElementById("mobile"),
 	    codes=document.getElementById("code"),
@@ -85,7 +84,7 @@
 		ctx.clearRect(0,0,1000,1000);
 		ctx.fillText(code,40,110);
 	}    
-}
+
 function CheckPassWord(password) {//必须为字母加数字且长度不小于8位
    var str = password;
     if (str == null || str.length <6 || str.length >12) {
@@ -101,3 +100,4 @@ function CheckPassWord(password) {//必须为字母加数字且长度不小于8�
     } else {
         return false;
     }
+}
