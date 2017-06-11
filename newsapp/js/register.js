@@ -33,7 +33,7 @@ window.onload=function(){
 	    	if(test && CheckPassWord(passcode.value)){
 	    		if(passcode.value==repasscode.value){
 	    			var xhr=new XMLHttpRequest();
-	    		xhr.open("POST",'http://localhost:8000/register.php',true);
+	    		xhr.open("POST",'http://localhost/hc/newsapp/src/register.php',true);
 	    		xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 	    		xhr.send("email="+value+"&passcode="+passcode.value);
 	    		xhr.onreadystatechange=function(){
