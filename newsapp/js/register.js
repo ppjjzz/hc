@@ -65,7 +65,9 @@
 	for (var i=97;i<123;i++) {
 		arr.push(i)
 	}
-	arr=arr.map(x=>String.fromCharCode(x))
+	arr=arr.map(function(x){
+		return String.fromCharCode(x);
+	})
 //	arr=arr.map(x=>x.toUpperCase())
 	for (let i=0;i<4;i++) {
 		var ran=parseInt(Math.random()*52);
