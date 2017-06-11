@@ -6,7 +6,7 @@ var login=document.getElementById("bubble"),
     passcode=document.getElementById("passcode");
     login.onclick=function(){
     	var xhr=new XMLHttpRequest();
-    	    xhr.open("POST","http://localhost/hc/newsapp/src/login.php",true);
+    	    xhr.open("POST","../src/login.php",true);
     	    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     	    xhr.send('username='+username.value+"&passcode="+passcode.value);
     	    xhr.onreadystatechange=function(){
