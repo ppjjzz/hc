@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>狗仔队-注册</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+		<link rel="stylesheet" type="text/css" href="../css/init.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/register.css"/>
+		<script>
+			document.documentElement.style.fontSize=innerWidth/25+'px';
+		</script>
+		
+	</head>
+	<body>
+		<header>
+			<a href="login.html"><span id="back"></span>手机注册</a>
+		</header>
+		<section class="clear">
+				<ul>
+					<li><input type="text" name="mobile" id="mobile" value="" placeholder="请输入手机号" required="required" /><button id="getcode">获取验证码</button><canvas id="canvas"></canvas></li>
+					<li><input type="text" name="code" id="code" value="" placeholder="请输入验证码" required="required" /></li>
+					<li><input type="password" name="passcode" id="passcode" value="" placeholder="6-12位数字、字母、符号、至少包含数字字母" required="required" /></li>
+					<li><input type="password" name="repasscode" id="repasscode" value="" placeholder="确认密码" required="required" /></li>
+				</ul>
+				<input type="submit" value="完成" id="submit"/>
+		
+			<a href="registeremail.html">使用邮箱注册</a>
+		</section>
+		<footer>
+			<p>点击【完成】按钮，代表你已经阅读并同意</p>
+			<span>狗仔队用户注册协议</span>
+		</footer>
+	</body>
+</html>
+<script src="../js/register.js" type="text/javascript" charset="utf-8"></script>

@@ -24,3 +24,6 @@ footer div:nth-of-type(3) p { width: 100%; height: 1rem; text-align: center; col
 footer div:nth-of-type(3) #pics { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; width: 100%; height: 2.03333rem; margin-top: 1.06667rem; }
 footer div:nth-of-type(3) #pics img { width: 2.03333rem; }
 footer div:nth-of-type(4) { position: absolute; bottom: 0; right: 0; width: 7.6rem; height: 8.3rem; border-top: 0.03333rem solid #e5e5e5; }
+
+.warring { position: fixed; width: 100%; height: 100%; top: 2.93333rem; background-color: rgba(0, 0, 0, 0.5); z-index: 999; display: none; }
+.warring #userError, .warring #passError { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 15.2rem; height: 11.2rem; opacity: .602; z-index: 999999; display: none; }

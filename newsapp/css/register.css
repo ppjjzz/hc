@@ -1,0 +1,17 @@
+body, html { background: #f4f4f4; }
+
+header { height: 2.93333rem; width: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; padding: 0 0.8rem; background: white; }
+header a:first-child { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+header #back { background: url(../img/SVG/back.svg) no-repeat; display: inline-block; height: 3rem; width: 3rem; margin-left: -1.16667rem; }
+
+section { padding-top: 3.06667rem; }
+section > a { color: #f8b62b; font-size: 0.8rem; float: right; margin-top: 1.6rem; margin-right: 0.83333rem; }
+section #submit { border: 0.03333rem solid #dbdbdb; -webkit-border-radius: 0.33333rem; border-radius: 0.33333rem; background-color: white; width: 23.26667rem; height: 2.6rem; outline: none; text-align: center; line-height: 2.6rem; font-size: 0.93333rem; margin-top: 7.6rem; margin-left: 0.83333rem; }
+section ul li { height: 3.36667rem; border-top: 0.03333rem solid #dbdbdb; background: white; width: 100%; line-height: 3.36667rem; padding-left: 0.86667rem; }
+section ul li #getcode { height: 3.36667rem; text-align: center; color: #f8b62b; font-size: 1rem; background: #777777; border: none; outline: none; padding: 0 0.76667rem; float: right; }
+section ul li #canvas { height: 3.36667rem; width: 6.5rem; border-left: 0.03333rem solid #dbdbdb; float: right; display: none; }
+section ul li input { font-size: 0.93333rem; outline: none; border: none; }
+
+footer { width: 100%; text-align: center; line-height: 1rem; margin-top: 3.66667rem; }
+footer p { color: #777777; font-size: 0.66667rem; }
+footer span { font-size: 0.66667rem; color: #f8b62b; }

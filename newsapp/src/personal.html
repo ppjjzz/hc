@@ -18,10 +18,10 @@
 				<div class="radius">
 				
 			</div>
-			<a href="login.html" class="circle">
+			<a href="login.html" class="circle" id="loginLink">
 				<img src="../img/logogray.png" />
 			</a>
-			<div class="denglu">
+			<div class="denglu" id="login">
 					点击头像登录
 				</div>
 				<div class="triangle"></div>
@@ -56,3 +56,21 @@
 	</footer>
 	</body>
 </html>
+<script type="text/javascript">
+	var login=document.getElementById("login");
+	    loginLink=document.getElementById("loginLink");
+	var username=sessionStorage.getItem("username");
+	if(username){
+		login.innerHTML=username;
+		loginLink.onclick=function(){
+			var t=confirm("是否注销帐号");
+			if(t){
+				sessionStorage.removeItem("username");
+			} else{
+				return false;
+			}
+			
+		}
+		
+	}
+</script>

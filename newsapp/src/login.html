@@ -8,6 +8,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
 		<link rel="stylesheet" type="text/css" href="../css/init.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+		
 		<script>
 			document.documentElement.style.fontSize=innerWidth/25+'px';
 		</script>
@@ -15,15 +16,15 @@
 	<body>
 		<header>
 			<a href="personal.html"><span id="back"></span>返回</a>
-			<a href="" id="cancel">取消</a>
+			<a href="register.html" id="cancel">注册</a>
 		</header>
 		<section>
 			<div class="radius">
 				<img src="../img/logo.png" />
 			</div>
 			<ul>
-				<li><img src="../img/geren2.png"/><input type="text" name="" id="" value="" placeholder="手机/邮箱" required="required" /></li>
-				<li><img src="../img/mima.png"/><input type="password" name="" id="" value="" placeholder="密码" required="required" /></li>
+				<li><img src="../img/geren2.png"/><input type="text" name="username" id="username" value="" placeholder="手机/邮箱" required="required" /></li>
+				<li><img src="../img/mima.png"/><input type="password" name="passcode" id="passcode" value="" placeholder="密码" required="required" /></li>
 			</ul>
 			
 		</section>
@@ -41,5 +42,10 @@
 			</div>
 			<div></div>
 		</footer>
+		<div class="warring" id="warring">
+			<img src="../img/SVG/passwordErro.svg" id="passError"/>
+			<img src="../img/SVG/usernameErro.svg" id="userError"/>
+		</div>
 	</body>
 </html>
+<script src="../js/login.js" type="text/javascript" charset="utf-8"></script>
