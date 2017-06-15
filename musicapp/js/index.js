@@ -20,7 +20,9 @@ window.addEventListener("load",function(){
 			search:function(){
 				this.searchtoggle=false;
 				this.toggle=false;
-				
+				this.$nextTick(function(){
+					this.$refs.inputs.focus();
+				})
 			},
 			cancels:function(){
 				this.toggle=true;
@@ -28,7 +30,6 @@ window.addEventListener("load",function(){
 				this.keywords="";
 			},
 			recoder:function(){
-				console.log(this.keywords)
 				if(this.keywords!=""){
 					this.historys.push(this.keywords)
 				}
@@ -70,9 +71,7 @@ window.addEventListener("load",function(){
 				}
 			}
 		},
-		updated:function(){
-			this.$refs.inputs.focus();
-		}
+		
 	})
 	$.getJSON("http://119.29.111.179:3000/banner",function(data){
 		console.log(data);
@@ -92,7 +91,10 @@ window.addEventListener("load",function(){
 	})
 	})
 	});
-
+//$(".searchbg").on("scroll",function(){
+//	console.log("aa")
+//	$("#search").trigger("blur")
+//})
 	var banner = new Swiper('#banner', {
 	autoplay: 5000,//可选选项，自动滑动
 	pagination: '.swiper-pagination',
