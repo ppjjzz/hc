@@ -43,17 +43,17 @@ window.addEventListener("load",function(){
 				clearTimeout(timer)
 				if(val!=""){
 					timer=setTimeout(function(){
-						$.getJSON("http://localhost:3000/search/suggest?keywords="+val,function(data){
+						$.getJSON("http://119.29.111.179:3000/search/suggest?keywords="+val,function(data){
 						if(data.result.artists){
 							if(data.result.artists[0].name==val){
 							var artistsId=data.result.artists[0].id;
-							$.getJSON("http://localhost:3000/artists?id="+artistsId,function(res){
+							$.getJSON("http://119.29.111.179:3000/artists?id="+artistsId,function(res){
 								app.inputing=false;
 								app.aors=true;
 								app.result=res.hotSongs;
 							})
 						} else{
-							$.getJSON("http://localhost:3000/search?keywords="+val,function(res){
+							$.getJSON("http://119.29.111.179:3000/search?keywords="+val,function(res){
 								app.inputing=false;
 								app.aors=false;
 								app.result=res.result.songs
@@ -74,17 +74,17 @@ window.addEventListener("load",function(){
 			this.$refs.inputs.focus();
 		}
 	})
-	$.getJSON("http://localhost:3000/banner",function(data){
+	$.getJSON("http://119.29.111.179:3000/banner",function(data){
 		console.log(data);
 		app.items=data.banners;
-		$.getJSON("http://localhost:3000/personalized",function(data){
+		$.getJSON("http://119.29.111.179:3000/personalized",function(data){
 		console.log(data);
 		app.recommendSongs=data.result;
-		$.getJSON("http://localhost:3000/personalized/newsong",function(data){
+		$.getJSON("http://119.29.111.179:3000/personalized/newsong",function(data){
 		console.log(data);
 		data.result.length=5;
 		app.newsongs=data.result;
-		$.getJSON("http://localhost:3000/dj/recommend",function(data){
+		$.getJSON("http://119.29.111.179:3000/dj/recommend",function(data){
 		console.log(data);
 		data.djRadios.length=3;
 		app.djs=data.djRadios;
@@ -92,11 +92,7 @@ window.addEventListener("load",function(){
 	})
 	})
 	});
-	$(".searchbg").on("blur",function(){
-//		sessionStorage.setItem("shistorys",$(this).val());
-//		search.blur();
-		app.historys.push($("#search").val());
-	})
+
 	var banner = new Swiper('#banner', {
 	autoplay: 5000,//可选选项，自动滑动
 	pagination: '.swiper-pagination',

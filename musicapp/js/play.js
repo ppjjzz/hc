@@ -133,7 +133,7 @@ window.onload=function(){
     }
     var arr2=[];
     //歌词AJAX
-    $.getJSON("http://localhost:3000/lyric?id="+id,function(data){
+    $.getJSON("http://119.29.111.179:3000/lyric?id="+id,function(data){
     	var arr=data.lrc.lyric.split("\n");
     	console.log(arr);
     	
@@ -150,11 +150,11 @@ window.onload=function(){
 //  effect : 'flip',
   });
     });
-    $.getJSON("http://localhost:3000/music/url?id="+id,function(data){
+    $.getJSON("http://119.29.111.179:3000/music/url?id="+id,function(data){
     	app2.mp3=data.data[0].url;
     	
     })
-    $.getJSON("http://localhost:3000/song/detail?ids="+id,function(data){
+    $.getJSON("http://119.29.111.179:3000/song/detail?ids="+id,function(data){
     	app2.bg=data.songs[0].al.picUrl;
     	app2.zhuanji=data.songs[0].al.name;
     	app2.name=data.songs[0].name;
