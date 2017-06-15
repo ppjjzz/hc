@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+	    <meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>QQ音乐</title>
+		<link rel="stylesheet" type="text/css" href="../css/init.css"/>
+		<link rel="stylesheet" type="text/css" href="../img/font/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swiper-3.4.2.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/play.css"/>
+		<script type="text/javascript">
+			document.documentElement.style.fontSize=innerWidth/18+'px';
+		</script>
+		<script src="../js/jquery-3.2.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/component.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/play.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app2">
+			<div class="bg">
+				<img :src="bg" class="blur"/>
+			</div>
+		
+		<header class="top">
+				<a href="../index.html"><i class="iconfont icon-xiangxia"></i></a>
+				<div class="title">
+					<p>{{name}}</p>
+					<span>——{{artic}}——</span>
+				</div>
+				<a href=""><i class="iconfont icon-gengduo"></i></a>
+		</header>
+		<section>
+			<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide left">
+        	<ul>
+        		<li>
+        			<div class="leftd">
+        				<img :src="bg" class="singerpic"/>
+        				<span>歌手：{{artic}}</span>
+        			</div>
+        			<i class="iconfont icon-xiangyou"></i>
+        		</li>
+        		<li>
+        			<div class="leftd">
+        				<img :src="bg" class="zhuanjipic"/>
+        				<span>专辑：{{zhuanji}}</span>
+        			</div>
+        			<i class="iconfont icon-xiangyou"></i>
+        		</li>
+        		<li>
+        			<div class="leftd">
+        				<i class="iconfont icon-i"></i>
+        				<span>单曲详情</span>
+        			</div>
+        			<i class="iconfont icon-xiangyou"></i>
+        		</li>
+        		<li>
+        			<div class="leftd">
+        				<i class="iconfont icon-iconfontyuleyinle"></i>
+        				<span>相似的歌曲</span>
+        			</div>
+        			<i class="iconfont icon-xiangyou"></i>
+        		</li>
+        		<li>
+        			<div class="leftd">
+        				<i class="iconfont icon-gedan"></i>
+        				<span>相似的歌单</span>
+        			</div>
+        			<i class="iconfont icon-xiangyou"></i>
+        		</li>
+        	</ul>
+        </div>
+        <div class="swiper-slide middle">
+        	<div class="bpic">
+				<img :src="bg" />
+			</div>
+			<p class="lyric"></p>
+        </div>
+        <div class="swiper-slide right"><ul>
+        	<li v-for="lyc in lycs">{{lyc | f}}</li>
+        </ul></div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+      <audio :src="mp3" id="audio"></audio>
+			<div class="media">
+				<div class="progress">
+					<span id="spent">00:00</span>
+					<div id="progress">
+						<div class="ing" id="ing">
+							
+						</div>
+					</div>
+					<span id="count"></span>
+				</div>
+				<div class="control">
+					<i class="iconfont icon-xunhuan" id="loop"></i>
+					<div class="main">
+						<i class="iconfont icon-xiayishou" id="pre"></i>
+						<i class="iconfont icon-bofang1" id="play"></i>
+						<i class="iconfont icon-xiayishou" id="next"></i>
+					</div>
+					<i class="iconfont icon-gedan"></i>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<i class="iconfont icon-aixin"></i>
+			<i class="iconfont icon-xiazai"></i>
+		</footer>
+		</div>
+	</body>
+</html>

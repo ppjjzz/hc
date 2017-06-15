@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>QQ音乐</title>
+    <link rel="stylesheet" type="text/css" href="css/init.css"/>
+    <link rel="stylesheet" type="text/css" href="img/font/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <script type="text/javascript">
+    	document.documentElement.style.fontSize=innerWidth/18+'px';
+    </script>
+    <script src="js/jquery-3.2.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/component.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div id="app">
+	<header>
+		<nav>
+			<a href="#" class="iconfont icon-menu"></a>
+			<div class="middle">
+				<a href="">我的</a>
+				<a href="" class="active">音乐馆</a>
+				<a href="">发现</a>
+			</div>
+			<a href="" class="iconfont icon-iconfontyuleyinle"></a>
+		</nav>
+		<div class="search" >
+			<div class="search1" v-show="searchtoggle" @click="search">
+				<i class="iconfont icon-fangdajing"></i><span>搜索</span>
+			</div>
+			<div class="search2" v-show="!searchtoggle">
+				<input type="text" name="search" id="search" ref="inputs" value="" placeholder="搜索音乐、歌手、歌单" v-model="keywords" @blur="recoder" />
+			<span id="cancel" v-on:click.stop="cancels">取消</span>
+			</div>
+				
+		</div>
+	</header>
+	<div class="searchbg" v-show="!toggle">
+			<ul>
+				<li v-show="inputing"><span class="searchhistory">搜索历史</span><span class="clearhistory">清除历史</span></li>
+				<li v-show="inputing" v-for="li of historys">{{li}}<i class="iconfont icon-cha"></i></li>
+				<li v-for="res in result" class="result" v-show="!inputing" @click="toplay(res.id)">
+					<div class="songs" v-if="aors">
+						<p>{{res.name}}</p>
+						<span>{{res.ar[0].name}}·{{res.al.name}}</span>
+					</div>
+					<div class="songs" v-else>
+						<p>{{res.name}}</p>
+						<span>{{res.artists[0].name}}·{{res.album.name}}</span>
+					</div>
+					<i class="iconfont icon-gengduo"></i>
+				</li>
+			</ul>
+		</div>
+	<section v-show="toggle">
+		<swiper :items="items"></swiper>
+		<div class="channel">
+			<div class="list1">
+				<a href=""><i class="iconfont icon-geshou"></i>歌手</a>
+			<a href=""><i class="iconfont icon-paihang"></i>排行</a>
+			<a href=""><i class="iconfont icon-diantai"></i>电台</a>
+			</div>
+			<div class="list2">
+				<a href=""><i class="iconfont icon-fenlei"></i>分类歌单</a>
+			<a href=""><i class="iconfont icon-yinlemv"></i>视频MV</a>
+			<a href=""><i class="iconfont icon-zhuanji"></i>数字专辑</a>
+			</div>
+		</div>
+		<div class="recommend">
+			<div class="title">
+				热门推荐<i class="iconfont icon-qianjing"></i>
+			</div>
+			<recommend :recommend-songs="recommendSongs"></recommend>
+			<div class="title">
+				每日为你推荐·10首<i class="iconfont icon-qianjing"></i>
+			</div>
+			<recommendtwo :newsongs='newsongs'></recommendtwo>
+			<div class="title">
+				精选电台<i class="iconfont icon-qianjing"></i>
+			</div>
+			<redj :djs='djs'></redj>
+		</div>
+	</section>
+	</div>
+</body>
+</html>
