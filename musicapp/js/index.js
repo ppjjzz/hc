@@ -1,5 +1,6 @@
 var app;
 var timer;
+var t=true;
 window.addEventListener("load",function(){
 	app=new Vue({
 		el:"#app",
@@ -41,7 +42,8 @@ window.addEventListener("load",function(){
 		},
 		watch:{
 			keywords:function(val){
-				clearTimeout(timer)
+				clearTimeout(timer);
+				t=true;
 				if(val!=""){
 					timer=setTimeout(function(){
 						$.getJSON("http://119.29.111.179:3000/search/suggest?keywords="+val,function(data){
@@ -91,10 +93,12 @@ window.addEventListener("load",function(){
 	})
 	})
 	});
-//$(".searchbg").on("scroll",function(){
-//	console.log("aa")
-//	$("#search").trigger("blur")
-//})
+$(".searchbg").on("scroll",function(){
+	if(t){
+		$("#search").trigger("blur");
+	}
+	t=false;
+})
 	var banner = new Swiper('#banner', {
 	autoplay: 5000,//可选选项，自动滑动
 	pagination: '.swiper-pagination',
