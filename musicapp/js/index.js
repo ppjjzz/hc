@@ -38,6 +38,9 @@ window.addEventListener("load",function(){
 			},
 			toplay:function(id){
 				location.href="src/play.html?id="+id
+			},
+			clear:function(){
+				this.historys.length=0;
 			}
 		},
 		watch:{

@@ -44,7 +44,7 @@
 	</header>
 	<div class="searchbg" v-show="!toggle">
 			<ul>
-				<li v-show="inputing"><span class="searchhistory">搜索历史</span><span class="clearhistory">清除历史</span></li>
+				<li v-show="inputing"><span class="searchhistory">搜索历史</span><span class="clearhistory" @click="clear">清除历史</span></li>
 				<li v-show="inputing" v-for="li of historys">{{li}}<i class="iconfont icon-cha"></i></li>
 				<li v-for="res in result" class="result" v-show="!inputing" @click="toplay(res.id)">
 					<div class="songs" v-if="aors">

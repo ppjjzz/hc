@@ -48,7 +48,7 @@ section .recommend #redj .title { padding: 0.36232rem 0.43478rem 0 0.28986rem; m
 section .recommend #redj .title .rcmdtext { font-size: 0.49275rem; }
 section .recommend #redj .title .name, section .recommend #redj .title > span { font-size: 0.3913rem; color: #626262; overflow: hidden; -o-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; }
 
-.searchbg { position: fixed; height: 100%; width: 100%; z-index: 2; top: 3.91304rem; padding-left: 0.82609rem; overflow: auto; padding-bottom: 3.91304rem; }
+.searchbg { height: 100%; width: 100%; padding-left: 0.82609rem; overflow: auto; padding-top: 3.91304rem; }
 .searchbg li { border-bottom: 0.01449rem solid #e6e6e6; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; height: 2.17391rem; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; font-size: 0.66667rem; padding-right: 0.86957rem; }
 .searchbg li .searchhistory { font-size: 0.55072rem; color: #666666; }
 .searchbg li .clearhistory { font-size: 0.55072rem; color: #31c27c; }
