@@ -40,7 +40,8 @@ window.addEventListener("load",function(){
 				location.href="src/play.html?id="+id
 			},
 			clear:function(){
-				this.historys.length=0;
+				console.log(this.historys)
+				this.historys=[];
 			}
 		},
 		watch:{
@@ -96,7 +97,7 @@ window.addEventListener("load",function(){
 	})
 	})
 	});
-$(".searchbg").on("scroll",function(){
+$(document).on("scroll",function(){
 	if(t){
 		$("#search").trigger("blur");
 	}
