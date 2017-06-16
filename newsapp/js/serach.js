@@ -18,7 +18,7 @@ $(function(){
 					request(val);
 				}
 				if(txt.value==""){
-					this.keyrs.length=0;
+					this.keyrs=[];
 				}
 			}
 		}
