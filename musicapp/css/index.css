@@ -55,3 +55,4 @@ section .recommend #redj .title .name, section .recommend #redj .title > span { 
 .searchbg .result .songs { overflow: hidden; }
 .searchbg .result p { font-size: 0.63768rem; -o-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
 .searchbg .result span { font-size: 0.47826rem; color: #666666; }
+.searchbg .result > i.icon-shanchu { color: red; }

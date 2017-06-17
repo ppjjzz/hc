@@ -13,9 +13,9 @@
 		<script type="text/javascript">
 			document.documentElement.style.fontSize=innerWidth/18+'px';
 		</script>
-		<script src="../js/jquery-3.2.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://code.jquery.com/jquery-3.2.0.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://unpkg.com/vue@2.3.4/dist/vue.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/component.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/play.js" type="text/javascript" charset="utf-8"></script>
 	</head>
@@ -101,9 +101,9 @@
 				<div class="control">
 					<i class="iconfont icon-xunhuan" id="loop"></i>
 					<div class="main">
-						<i class="iconfont icon-xiayishou" id="pre"></i>
+						<i class="iconfont icon-xiayishou" id="pre" @click="playPre"></i>
 						<i class="iconfont icon-bofang1" id="play"></i>
-						<i class="iconfont icon-xiayishou" id="next"></i>
+						<i class="iconfont icon-xiayishou" id="next" @click="playNext"></i>
 					</div>
 					<i class="iconfont icon-gedan"></i>
 				</div>

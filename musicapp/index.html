@@ -13,9 +13,9 @@
     <script type="text/javascript">
     	document.documentElement.style.fontSize=innerWidth/18+'px';
     </script>
-    <script src="js/jquery-3.2.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://code.jquery.com/jquery-3.2.0.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://unpkg.com/vue@2.3.4/dist/vue.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/component.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/index.js" type="text/javascript" charset="utf-8"></script>
 </head>
@@ -29,7 +29,7 @@
 				<a href="" class="active">音乐馆</a>
 				<a href="">发现</a>
 			</div>
-			<a href="" class="iconfont icon-iconfontyuleyinle"></a>
+			<a href="src/play.html" class="iconfont icon-iconfontyuleyinle" ></a>
 		</nav>
 		<div class="search" >
 			<div class="search1" v-show="searchtoggle" @click="search">
@@ -55,7 +55,7 @@
 						<p>{{res.name}}</p>
 						<span>{{res.artists[0].name}}·{{res.album.name}}</span>
 					</div>
-					<i class="iconfont icon-gengduo"></i>
+					<i class="iconfont icon-add2 x" @click.stop="add(res.id,$event)"></i>
 				</li>
 			</ul>
 		</div>
@@ -64,7 +64,7 @@
 		<div class="channel">
 			<div class="list1">
 				<a href=""><i class="iconfont icon-geshou"></i>歌手</a>
-			<a href=""><i class="iconfont icon-paihang"></i>排行</a>
+			<a href="src/ranking.html"><i class="iconfont icon-paihang"></i>排行</a>
 			<a href=""><i class="iconfont icon-diantai"></i>电台</a>
 			</div>
 			<div class="list2">
@@ -81,7 +81,7 @@
 			<div class="title">
 				每日为你推荐·10首<i class="iconfont icon-qianjing"></i>
 			</div>
-			<recommendtwo :newsongs='newsongs'></recommendtwo>
+			<recommendtwo :newsongs='newsongs' :toplay='toplay'></recommendtwo>
 			<div class="title">
 				精选电台<i class="iconfont icon-qianjing"></i>
 			</div>

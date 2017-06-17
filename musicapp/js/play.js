@@ -1,9 +1,13 @@
 var mySwiper;
 var app2;
 var id=location.search.slice(1).split("=")[1];
-console.log(id);
+var mylist=JSON.parse(sessionStorage.getItem("mylist"));
+var index=0;
+var arr2=[];
 window.onload=function(){
-
+    var timer;
+    var flag=true;
+    var Oaudio=document.getElementById("audio");
     app2=new Vue({
     	el:"#app2",
     	data:{
@@ -18,16 +22,85 @@ window.onload=function(){
     		f:function(val){
     			return val.slice(5);
     		}
+    	},
+    	methods:{
+    		playNext:function(){
+    			if(!mylist){
+    				return
+    			}
+    			$("audio").trigger("ended")
+    		},
+    		playPre:function(){
+    			if(!mylist){  //如果没有播放列表禁用上一首按钮
+    				return
+    			}
+    			clearInterval(timer);
+    			index--;
+    	if(index>=0){
+    	ajaxSong(mylist[index]);
+    	$("#audio")[0].load();
+    	} else{
+    		ajaxSong(mylist[mylist.length-1]);
+    		index= -1;
+    	}
+    		}
     	}
     	
     })
-    var audio=document.getElementById("audio");
-    audio.oncanplay=function(){
-    	showDuration();
+    if(id){ //如果有单曲ID则播放单曲，否则判断是否有播放列表传入
+    	console.log("a")
+    	ajaxSong(id);
+    } else if(mylist){
+    	console.log("b")
+    	ajaxSong(mylist[index]);
+//  	showTime();
     }
-    function showDuration(){
-    	var countTime=parseInt(audio.duration);
-    audio.volume=1;
+    function ajaxSong(ids){
+    	$.getJSON("http://119.29.111.179:3000/music/url?id="+ids,function(data){
+    		console.log(data.data[0].url)
+    	app2.mp3=data.data[0].url;
+    	
+    })
+    $.getJSON("http://119.29.111.179:3000/song/detail?ids="+ids,function(data){
+    	app2.bg=data.songs[0].al.picUrl;
+    	app2.zhuanji=data.songs[0].al.name;
+    	app2.name=data.songs[0].name;
+    	app2.artic=data.songs[0].ar[0].name;
+    });
+    $.getJSON("http://119.29.111.179:3000/lyric?id="+ids,function(data){
+    	var arr=data.lrc.lyric.split("\n");
+    	console.log(arr); //歌词AJAX
+    	arr2=[];
+    	for (var i=0;i<arr.length;i++) {
+    		arr2.push(arr[i].replace(/\[(\d\d:\d\d).\d+\]/g,function(){
+    			return arguments[1];
+    		}))
+    	}
+    	console.log(arr2);
+    	app2.lycs=arr2;
+    	mySwiper = new Swiper ('.swiper-container', {
+    pagination: '.swiper-pagination',
+    initialSlide :1,
+//  effect : 'flip',
+  });
+    });
+    }
+    
+    
+    $("#audio")[0].addEventListener("canplay",function(){  //音频加载完毕
+    	flag=true;
+    	$("#play").trigger("click");
+    	showDuration();
+    },false)
+//  $("#audio").on("canplay",function(){
+//  	console.log("ready")
+//  	flag=true;
+//  	$("#play").trigger("click");
+//  	showDuration();
+//  	
+//  })
+    function showDuration(){  //显示单曲时长
+    	var countTime=parseInt($("#audio")[0].duration);
     var min;
     var sec;
     min=parseInt(countTime/60);
@@ -43,11 +116,10 @@ window.onload=function(){
     $("#count").html(countTime);
     }
     
-    var timer;
-    var flag=true;
-    function showTime(){
-    	var countTime=parseInt(audio.currentTime);
-    			var cost=parseInt(audio.currentTime)/parseInt(audio.duration);
+    
+    function showTime(){ //显示已播放时间
+    	var countTime=parseInt($("#audio")[0].currentTime);
+    			var cost=parseInt($("#audio")[0].currentTime)/parseInt($("#audio")[0].duration);
     			$("#ing").width($("#progress").width()*cost);
     var min;
     var sec;
@@ -63,10 +135,11 @@ window.onload=function(){
     countTime=min+":"+sec;
     			$("#spent").html(countTime);
     }
+    //点击播放按钮事件
     $("#play").on("click",function(){
     	clearInterval(timer);
     	if(flag){
-    		audio.play();
+    		$("#audio")[0].play();
     		showTime();
     		$(".bpic").css({
     			animation:"xuan 60s linear infinite"
@@ -90,7 +163,7 @@ window.onload=function(){
     		
     	$(this).addClass("icon-zanting");
     	} else{
-    		audio.pause();
+    		$("#audio")[0].pause();
     		$(".bpic").css({
     			animation:""
     		});
@@ -99,12 +172,13 @@ window.onload=function(){
     	flag=!flag;
     });
     var loop=true;
+    //点击循环播放
     $("#loop").click(function(){
     	if(loop){
-    		audio.loop=true;
+    		$("#audio")[0].loop=true;
     	$(this).css("color","white");
     	} else{
-    		audio.loop=false;
+    		$("#audio")[0].loop=false;
     	$(this).css("color","#c3c3bd");
     	}
     	loop=!loop;
@@ -117,7 +191,7 @@ window.onload=function(){
     	var t=e.touches[0].pageX-$("#progress").offset().left;
     	if(t<=$("#progress").width()){
     		$("#ing").width(t);
-    		audio.currentTime=parseInt(audio.duration*($("#ing").width()/$("#progress").width()));
+    		$("#audio")[0].currentTime=parseInt($("#audio")[0].duration*($("#ing").width()/$("#progress").width()));
     		showTime();
     	} else{
     		$("#ing").width($("#progress").width());
@@ -125,39 +199,25 @@ window.onload=function(){
     	
     });
     $("#progress").on("touchend",function(){
-    	audio.currentTime=parseInt(audio.duration*($("#ing").width()/$("#progress").width()));
+    	$("#audio")[0].currentTime=parseInt($("#audio")[0].duration*($("#ing").width()/$("#progress").width()));
     	$("#play").trigger("click");
     });
-    audio.onended=function(){
+    //播放结束事件
+    $("#audio")[0].onended=function(){
     	clearInterval(timer);
-    }
-    var arr2=[];
-    //歌词AJAX
-    $.getJSON("http://119.29.111.179:3000/lyric?id="+id,function(data){
-    	var arr=data.lrc.lyric.split("\n");
-    	console.log(arr);
-    	
-    	for (var i=0;i<arr.length;i++) {
-    		arr2.push(arr[i].replace(/\[(\d\d:\d\d).\d+\]/g,function(){
-    			return arguments[1];
-    		}))
+    	console.log("end")
+    	index++;
+    	if(mylist[index]){
+    	ajaxSong(mylist[index]);
+    	$("#audio")[0].load();
+    	} else if(mylist[0]){
+    		ajaxSong(mylist[0]);
+    		index=0;
     	}
-    	console.log(arr2);
-    	app2.lycs=arr2;
-    	mySwiper = new Swiper ('.swiper-container', {
-    pagination: '.swiper-pagination',
-    initialSlide :1,
-//  effect : 'flip',
-  });
-    });
-    $.getJSON("http://119.29.111.179:3000/music/url?id="+id,function(data){
-    	app2.mp3=data.data[0].url;
     	
-    })
-    $.getJSON("http://119.29.111.179:3000/song/detail?ids="+id,function(data){
-    	app2.bg=data.songs[0].al.picUrl;
-    	app2.zhuanji=data.songs[0].al.name;
-    	app2.name=data.songs[0].name;
-    	app2.artic=data.songs[0].ar[0].name;
-    })
+    }
+    
+   
+    
+    
 }

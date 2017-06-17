@@ -1,0 +1,29 @@
+#app { height: 100%; width: 100%; }
+
+.bgpic { position: fixed; top: 0; z-index: -9999; }
+.bgpic img { width: 100%; -webkit-filter: blur(0px); filter: blur(0px); position: fixed; top: 0; z-index: -9999; }
+
+.bgpic::after { content: ""; display: block; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.2); position: fixed; z-index: -999; top: 0; }
+
+header { padding: 0.57971rem 0.84058rem 0.57971rem; background: transparent; position: fixed; top: 0; width: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; z-index: 2; }
+header i.iconfont { font-size: 1.01449rem; color: white; }
+header .title { text-align: center; color: white; overflow: hidden; }
+header .title p { font-size: 0.7971rem; -o-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+header.htop { background: #555455; }
+
+.titles { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; height: 1.95652rem; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; border-bottom: 0.02899rem solid #e6e6e6; background: white; width: 100%; }
+.titles span { color: #62bf82; font-size: 0.63768rem; border-bottom: 0.14493rem solid #62bf82; padding: 0 0.50725rem 0.47826rem; }
+
+.totop { position: fixed; margin-top: 0; }
+
+section { width: 100%; background: white; margin-top: 11.71014rem; }
+section .ttop { width: 100%; }
+section .top { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; padding: 0.65217rem 0.65217rem; border-bottom: 0.01449rem solid #e6e6e6; width: 100%; background: white; }
+section .top span { font-size: 0.65217rem; }
+section .top span i { margin-right: 0.65217rem; color: #62bf82; font-size: 1.01449rem; }
+section ul { padding-left: 0.65217rem; }
+section ul li { padding-right: 0.72464rem; height: 2.4058rem; border-bottom: 0.01449rem solid #e6e6e6; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+section ul li .songs { overflow: hidden; }
+section ul li p { font-size: 0.63768rem; -o-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+section ul li span { font-size: 0.47826rem; color: #666666; -o-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+section ul li > i.icon-shanchu { color: red; }

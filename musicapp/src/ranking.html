@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>音乐排行榜</title>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" type="text/css" href="../css/init.css"/>
+    <link rel="stylesheet" type="text/css" href="../img/font/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/ranking.css"/>
+    <script type="text/javascript">
+    	document.documentElement.style.fontSize=innerWidth/18+'px';
+    </script>
+    <script src="http://code.jquery.com/jquery-3.2.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://unpkg.com/vue@2.3.4/dist/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/component.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<header class="top">
+				<a href="../index.html"><i class="iconfont icon-xiangzuo"></i></a>
+				<p class="title">排行</p>
+		</header>
+		<section>
+			<p class="top">QQ音乐巅峰榜</p>
+			<rank :lists='lists'></rank>
+		</section>
+		</div>
+		
+	</body>
+</html>
+<script src="../js/ranking.js" type="text/javascript" charset="utf-8"></script>

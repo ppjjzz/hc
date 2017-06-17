@@ -1,0 +1,16 @@
+header { padding: 0.57971rem 0.84058rem; background: #31c27c; position: fixed; top: 0; width: 100%; text-align: center; height: 1.91304rem; z-index: 2; }
+header i.iconfont { font-size: 1.01449rem; color: white; float: left; }
+header .title { font-size: 0.7971rem; color: white; }
+
+section { background: #f4f4f4; padding-top: 1.91304rem; }
+section .top { width: 100%; text-align: center; font-size: 0.63768rem; padding: 0.89855rem 0; }
+section #rank { padding: 0 0.43478rem; }
+section #rank > li .detail { height: 5.82609rem; background: white; padding: 0 0.43478rem 0 0.33333rem; margin-bottom: 0.47826rem; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; width: 11.30435rem; }
+section #rank > li ul { line-height: 1.44928rem; overflow: hidden; }
+section #rank > li ul li { font-size: 0.57971rem; overflow: hidden; -o-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; }
+section #rank > li ul li span { color: #707070; }
+section #rank .pic { position: relative; height: 5.82609rem; }
+section #rank .pic img { width: 5.82609rem; height: 5.82609rem; }
+section #rank .pic > i { position: absolute; bottom: 0.14493rem; right: 0.14493rem; font-size: 0.95652rem; color: rgba(255, 255, 255, 0.4); }
+section #rank .pic .count { color: white; position: absolute; bottom: 0.36232rem; left: 0.33333rem; font-size: 0.43478rem; }
+section #rank .pic .count i { margin-right: 0.21739rem; }
