@@ -6,12 +6,12 @@ function loadnews(){
 		var arr=[];
 		
 				for (var i = length; i < res.data.length; i++) {
-					if(res.data[i].pic.length==0){
+					if(res.data[i].pic.length==0){  //如果该条新闻不带图片就跳过
 						continue;
 					} else{
 						arr.push(res.data[i])
 					}
-					if(arr.length==10){
+					if(arr.length==10){  //每次加载10条
 						length=i+1;
 						app.newsdata=app.newsdata.concat(arr);
 						break
@@ -19,13 +19,13 @@ function loadnews(){
 				}
 	}
 window.addEventListener('load',function(){
-	app=new Vue({
+	app=new Vue({  //创建Vue实例
 	el:'#app',
 	data:{
-		items:5,
-		newsdata:[],
-		newscdata:[],
-		show:true,
+		items:5,       //预留轮播图位置
+		newsdata:[],   //主页新闻数据
+		newscdata:[],  //搜索新闻结果
+		show:true,     //主页和频道切换开关
 	},
 })
 	
@@ -114,7 +114,7 @@ function getNews(type,page){
 			
 			$.ajax({
 			type:"get",
-			url:`http://cre.mix.sina.com.cn/api/v3/get?callback&cateid=1&cre=tianyi&mod=${type}&merge=3&statics=1&length=20&up=${page}&down=0&fields=media`,
+			url:"http://cre.mix.sina.com.cn/api/v3/get?callback&cateid=1&cre=tianyi&mod="+type+"&merge=3&statics=1&length=20&up="+page+"&down=0&fields=media",
 			dataType:"jsonp",
 //			jsonpCallback:"callback",
 			success:function (data){

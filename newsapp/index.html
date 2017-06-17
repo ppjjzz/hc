@@ -58,13 +58,18 @@
 		</nav>
 	</header>
 	<section id="app">
-		<template v-if='show'>
+		<div v-show='show'>
+			<template>
 			<swiper :items='items'></swiper><!--banner轮播图组件-->
 			<news :newsdata='newsdata'></news><!--主页新闻组件-->
 		</template>
-		<template v-else>
+		</div>
+		<div v-show='!show'>
+			<template>
 			<newsc :newscdata='newscdata'></newsc><!--分类新闻组件-->
 		</template>
+		</div>
+		
 		
 	</section>
 	<footer>

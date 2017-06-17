@@ -46,7 +46,7 @@ Vue.component('search',{
 	template:"<ul id='list'><li v-for='key of keyrs' class='result-list' @click='getResult'><img src='../img/SVG/search.svg' /><span class='highlight'>{{keywords}}</span>{{key | after}}</li></ul>",
 	props:['keywords','keyrs'],
 	
-	filters:{
+	filters:{  //关键字高亮
 		after:function(val){
 			var len=txt.value.length;
 			return val.substr(len)
