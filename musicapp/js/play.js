@@ -17,6 +17,8 @@ window.onload=function(){
     		name:'',
     		artic:'',
     		zhuanji:'',
+    		zhuanjiId:'',
+    		singerId:'',
     	},
     	filters:{
     		f:function(val){
@@ -43,7 +45,13 @@ window.onload=function(){
     		ajaxSong(mylist[mylist.length-1]);
     		index= -1;
     	}
-    		}
+    	},
+    	toList:function(){
+    		location.href="playlist.html?zhuanjiId="+this.zhuanjiId
+    	},
+    	toSingerList:function(){
+    		location.href="playlist.html?singerId="+this.singerId
+    	}
     	}
     	
     })
@@ -62,10 +70,14 @@ window.onload=function(){
     	
     })
     $.getJSON("http://119.29.111.179:3000/song/detail?ids="+ids,function(data){
+    	console.log(data)
     	app2.bg=data.songs[0].al.picUrl;
     	app2.zhuanji=data.songs[0].al.name;
+    	app2.zhuanjiId=data.songs[0].al.id;
     	app2.name=data.songs[0].name;
     	app2.artic=data.songs[0].ar[0].name;
+    	app2.singerId=data.songs[0].ar[0].id;
+    	
     });
     $.getJSON("http://119.29.111.179:3000/lyric?id="+ids,function(data){
     	var arr=data.lrc.lyric.split("\n");
@@ -152,7 +164,7 @@ window.onload=function(){
     					$(".right li").eq(i).addClass("active").siblings().removeClass("active");
     					if(i>5 && $(".lyric").text()!=""){
     						$(".right ul").animate({
-    						scrollTop:"+="+$(".right li").innerHeight()
+    						scrollTop:($(".right li").innerHeight())*(i-5)
     					},300)
     					}
     				}

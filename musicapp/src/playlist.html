@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>播放列表</title>
+		<title></title>
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,14 +34,14 @@
 		<section>
 			<div class="ttop">
 				<div class="titles">
-				<span>单曲</span>
+				<span>{{type}}</span>
 			</div>
-			<div class="top"><span @click="toPlayAll"><i class="iconfont icon-bofang3"></i>播放全部</span><span @click="toPlay"><i class="iconfont icon-bofang3"></i>播放选中</span></div>
+			<div class="top" v-if="!singer"><span @click="toPlayAll"><i class="iconfont icon-bofang3"></i>播放全部</span><span @click="toPlay"><i class="iconfont icon-bofang3"></i>播放选中</span></div>
 			</div>
 			
-			<ul>
+			<ul class="list" id="list">
 				<template v-if="which">
-					<li v-for="song of list" @click="toPlayId(song.id)">
+					<li v-for="song of list" @click="toPlayId(song.id)" class="single">
 					<div class="songs">
 						<p>{{song.name}}</p>
 				    <span>{{song.ar[0].name}}·{{song.al.name}}</span>
@@ -49,8 +49,17 @@
 					<i class="iconfont icon-add2 x" @click.stop="add(song.id,$event)"></i>
 				</li>
 				</template>
+				<template v-else-if="singer"> <!--歌手专辑-->
+					<li v-for="al of als" class="als" @click="toList(al.id)">
+						<img :src="al.picUrl" class="left-img"/>
+						<div class="right-detail">
+							<span>{{al.name}}</span>
+							<i class="iconfont icon-xiangyou"></i>
+						</div>
+					</li>
+				</template>
 				<template v-else>
-					<li v-for="song of list" @click="toPlayId(song.id)">
+					<li v-for="song of list" @click="toPlayId(song.id)" class="single">
 					<div class="songs">
 						<p>{{song.name}}</p>
 				    <span>{{song.artists[0].name}}</span>

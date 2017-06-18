@@ -12,6 +12,7 @@ if(sessionStorage.getItem("ranklist")){
 	$.getJSON("http://119.29.111.179:3000/top/list?idx="+i,function(data){
 		rankArr.push(data.result);
 		app.lists=rankArr;
+		sessionStorage.setItem("ranklist",JSON.stringify(rankArr));
 		if(rankArr.length==22){
 			console.log(rankArr);
 			app.lists=rankArr;
