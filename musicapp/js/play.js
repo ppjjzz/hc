@@ -95,6 +95,7 @@ window.onload=function(){
     initialSlide :1,
 //  effect : 'flip',
   });
+  $(".right ul").scrollTop(0)
     });
     }
     
@@ -104,13 +105,6 @@ window.onload=function(){
     	$("#play").trigger("click");
     	showDuration();
     },false)
-//  $("#audio").on("canplay",function(){
-//  	console.log("ready")
-//  	flag=true;
-//  	$("#play").trigger("click");
-//  	showDuration();
-//  	
-//  })
     function showDuration(){  //显示单曲时长
     	var countTime=parseInt($("#audio")[0].duration);
     var min;
@@ -217,6 +211,7 @@ window.onload=function(){
     //播放结束事件
     $("#audio")[0].onended=function(){
     	clearInterval(timer);
+    	$(this).removeClass("icon-zanting");
     	console.log("end")
     	index++;
     	if(mylist[index]){
