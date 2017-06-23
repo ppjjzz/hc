@@ -214,7 +214,10 @@ window.onload=function(){
     	$(this).removeClass("icon-zanting");
     	console.log("end")
     	index++;
-    	if(mylist[index]){
+    	if(mylist.length==1){
+    		return
+    	}
+    	if(index<mylist.length){
     	ajaxSong(mylist[index]);
     	$("#audio")[0].load();
     	} else if(mylist[0]){
