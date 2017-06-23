@@ -211,10 +211,16 @@ window.onload=function(){
     //播放结束事件
     $("#audio")[0].onended=function(){
     	clearInterval(timer);
-    	$(this).removeClass("icon-zanting");
+    	$("#play").removeClass("icon-zanting");
+    	$("#ing").width(0);
+    	$("#spent").html("00:00");
+    	flag=true;
+    	$(".bpic").css({
+    			animation:""
+    		});
     	console.log("end")
     	index++;
-    	if(mylist.length==1){
+    	if(!mylist ||mylist.length==1){
     		return
     	}
     	if(index<mylist.length){
