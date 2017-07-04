@@ -3,16 +3,16 @@
 .sj { width: 0.32rem; height: 0.32rem; border: 0.02rem solid #cccccc; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); border-color: #cccccc #cccccc transparent transparent; }
 
 section { background: #eaeaea; padding-bottom: 1.74rem; }
-section .ptitle { padding: 0.48rem 0; font-size: 0.4rem; color: #666666; }
+section .ptitle { padding: 0.48rem 0; font-size: 0.5rem; color: #666666; }
 section .introduction { padding: 0.6rem 0.4rem 0; background: white; color: #8c8c8c; }
-section .introduction .price-top { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; color: #989898; font-size: 0.32rem; }
-section .introduction .price-top .new_price { color: red; font-size: 0.56rem; margin-right: 0.52rem; }
+section .introduction .price-top { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; color: #989898; font-size: 0.44rem; }
+section .introduction .price-top .new_price { color: red; font-size: 0.8rem; margin-right: 0.52rem; }
 section .introduction .price-top .old_price { text-decoration: line-through; }
 section .introduction .title { font-size: 0.56rem; padding: 0.58rem 0 0.36rem; }
-section .introduction .time { color: red; font-size: 0.36rem; vertical-align: middle; }
-section .introduction .time i { font-size: 0.68rem; vertical-align: middle; }
-section .introduction .detail { line-height: 0.8rem; font-size: 0.4rem; margin-top: 0.9rem; }
-section .introduction .others { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; border-top: 0.02rem solid #CCCCCC; padding: 0.36rem 0; font-size: 0.3rem; margin-top: 0.66rem; }
+section .introduction .time { color: red; font-size: 0.52rem; vertical-align: middle; }
+section .introduction .time i { font-size: 0.76rem; vertical-align: middle; }
+section .introduction .detail { line-height: 0.8rem; font-size: 0.52rem; margin-top: 0.9rem; }
+section .introduction .others { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; border-top: 0.02rem solid #CCCCCC; padding: 0.36rem 0; font-size: 0.4rem; margin-top: 0.66rem; }
 section .introduction .others .left span { margin-right: 0.74rem; color: #cccccc; vertical-align: middle; }
 section .introduction .others .left span i { color: red; vertical-align: middle; }
 section .start_bulk { margin-top: 0.3rem; padding: 0 0.4rem; background: white; }
@@ -20,13 +20,13 @@ section .start_bulk li { border-top: 0.02rem solid #cccccc; padding: 0.6rem 0; d
 section .start_bulk li img { -webkit-border-radius: 50%; border-radius: 50%; width: 1.12rem; height: 1.12rem; margin-right: 0.24rem; }
 section .start_bulk li .left { height: 1.12rem; }
 section .start_bulk li .left > div { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
-section .start_bulk li .left p, section .start_bulk li .left span { font-size: 0.34rem; }
+section .start_bulk li .left p, section .start_bulk li .left span { font-size: 0.46rem; }
 section .start_bulk li .left span { color: #666666; }
 section .start_bulk li .right { color: red; -webkit-border-radius: 0.12rem; border-radius: 0.12rem; width: 2.16rem; height: 0.68rem; border: 0.02rem solid red; text-align: center; line-height: 0.68rem; font-size: 0.46rem; }
 section .feedback { margin-top: 0.3rem; background: white; padding: 0 0.4rem; }
 section .feedback .ptitle a { color: #a1a1a1; float: right; }
 section .feedback .ptitle a i { display: inline-block; }
-section .feedback li { padding: 0.6rem 0; font-size: 0.36rem; border-top: 0.02rem solid #cccccc; }
+section .feedback li { padding: 0.6rem 0; font-size: 0.46rem; border-top: 0.02rem solid #cccccc; }
 section .feedback li img { -webkit-border-radius: 50%; border-radius: 50%; width: 1.12rem; height: 1.12rem; margin-right: 0.4rem; vertical-align: middle; }
 section .feedback li .head { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 section .feedback li .head .date { color: #a9a9a9; }
@@ -34,8 +34,8 @@ section .feedback li .text { color: #666666; margin-top: 0.54rem; line-height: 0
 section .shop { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; padding: 0.48rem 0.4rem; background: white; margin-top: 0.3rem; }
 section .shop .shop_left img { width: 1.6rem; margin-right: 0.4rem; }
 section .shop .shop_left .shop_name { height: 1.6rem; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
-section .shop .shop_left .shop_name p { font-size: 0.4rem; }
-section .shop .shop_left .shop_name span { font-size: 0.34rem; }
+section .shop .shop_left .shop_name p { font-size: 0.52rem; }
+section .shop .shop_left .shop_name span { font-size: 0.4rem; }
 section .shop .shop_right { border: 0.02rem solid #999999; color: #999999; font-size: 0.46rem; padding: 0.1rem; -webkit-border-radius: 0.12rem; border-radius: 0.12rem; }
 section .shop .shop_right i { font-size: 0.6rem; }
 section .maybe_like { padding: 0 0.4rem 0.48rem; background: white; margin-top: 0.3rem; }
