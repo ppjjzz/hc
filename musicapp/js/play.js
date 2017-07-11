@@ -64,12 +64,12 @@ window.onload=function(){
 //  	showTime();
     }
     function ajaxSong(ids){
-    	$.getJSON("http://119.29.111.179:3000/music/url?id="+ids,function(data){
+    	$.getJSON("http://139.199.204.216:3000/music/url?id="+ids,function(data){
     		console.log(data.data[0].url)
     	app2.mp3=data.data[0].url;
     	
     })
-    $.getJSON("http://119.29.111.179:3000/song/detail?ids="+ids,function(data){
+    $.getJSON("http://139.199.204.216:3000/song/detail?ids="+ids,function(data){
     	console.log(data)
     	app2.bg=data.songs[0].al.picUrl;
     	app2.zhuanji=data.songs[0].al.name;
@@ -79,7 +79,7 @@ window.onload=function(){
     	app2.singerId=data.songs[0].ar[0].id;
     	
     });
-    $.getJSON("http://119.29.111.179:3000/lyric?id="+ids,function(data){
+    $.getJSON("http://139.199.204.216:3000/lyric?id="+ids,function(data){
     	var arr=data.lrc.lyric.split("\n");
     	console.log(arr); //歌词AJAX
     	arr2=[];

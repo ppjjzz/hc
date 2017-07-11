@@ -71,11 +71,11 @@ window.addEventListener("load",function(){
 				t=true;
 				if(val!=""){
 					timer=setTimeout(function(){
-						$.getJSON("http://119.29.111.179:3000/search/suggest?keywords="+val,function(data){
+						$.getJSON("http://139.199.204.216:3000/search/suggest?keywords="+val,function(data){
 						if(data.result.artists){
 							if(data.result.artists[0].name==val){
 							var artistsId=data.result.artists[0].id;
-							$.getJSON("http://119.29.111.179:3000/artists?id="+artistsId,function(res){
+							$.getJSON("http://139.199.204.216:3000/artists?id="+artistsId,function(res){
 								app.inputing=false;
 								app.aors=true;
 								app.result=res.hotSongs;
@@ -83,7 +83,7 @@ window.addEventListener("load",function(){
 				$(".x").addClass("icon-add2");
 							})
 						} else{
-							$.getJSON("http://119.29.111.179:3000/search?keywords="+val,function(res){
+							$.getJSON("http://139.199.204.216:3000/search?keywords="+val,function(res){
 								app.inputing=false;
 								app.aors=false;
 								app.result=res.result.songs;
@@ -110,20 +110,20 @@ window.addEventListener("load",function(){
 		app.newsongs=JSON.parse(sessionStorage.getItem("newsongs"));
 		app.djs=JSON.parse(sessionStorage.getItem("djs"));
 	} else{
-		$.getJSON("http://119.29.111.179:3000/banner",function(data){
+		$.getJSON("http://139.199.204.216:3000/banner",function(data){
 		console.log(data);
 		app.items=data.banners;
 		sessionStorage.setItem("banners",JSON.stringify(data.banners))
-		$.getJSON("http://119.29.111.179:3000/personalized",function(data){
+		$.getJSON("http://139.199.204.216:3000/personalized",function(data){
 		console.log(data);
 		app.recommendSongs=data.result;
 		sessionStorage.setItem("recommendSongs",JSON.stringify(data.result));
-		$.getJSON("http://119.29.111.179:3000/personalized/newsong",function(datas){
+		$.getJSON("http://139.199.204.216:3000/personalized/newsong",function(datas){
 		console.log(datas);
 		datas.result.length=5;
 		app.newsongs=datas.result;
 		sessionStorage.setItem("newsongs",JSON.stringify(datas.result));
-		$.getJSON("http://119.29.111.179:3000/dj/recommend",function(data){
+		$.getJSON("http://139.199.204.216:3000/dj/recommend",function(data){
 		console.log(data);
 		data.djRadios.length=3;
 		app.djs=data.djRadios;

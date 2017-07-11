@@ -93,7 +93,7 @@ window.onload=function(){
 			listAll.push(ranklist[id].tracks[i].id);
 		}
 	} else{
-		$.getJSON("http://119.29.111.179:3000/playlist/detail?id="+id,function(data){
+		$.getJSON("http://139.199.204.216:3000/playlist/detail?id="+id,function(data){
 		app.listName=data.playlist.name;
 		app.bgpic=data.playlist.coverImgUrl;
 		app.list=data.playlist.tracks;
@@ -106,7 +106,7 @@ window.onload=function(){
 	} else if(zhuanji){
 		getzj(zhuanji);
 	} else{
-		$.getJSON("http://119.29.111.179:3000/artist/album?id="+singerId+"&limit=30",function(data){
+		$.getJSON("http://139.199.204.216:3000/artist/album?id="+singerId+"&limit=30",function(data){
 			console.log(data)
 			$(".list").removeClass("list");
 			app.bgpic=data.artist.picUrl;
@@ -118,7 +118,7 @@ window.onload=function(){
 		})
 	}
 	function getzj(id){
-		$.getJSON("http://119.29.111.179:3000/album?id="+id,function(data){ //获取专辑详情
+		$.getJSON("http://139.199.204.216:3000/album?id="+id,function(data){ //获取专辑详情
 			console.log(data)
 			app.bgpic=data.album.picUrl;
 			app.listName=data.album.name;
